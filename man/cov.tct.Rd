@@ -15,16 +15,23 @@ cov.tct(ct, covN, type = "III")
 equivalently \code{1-4}, respectively.}
 }
 \value{
-The \eqn{k^2 \times k^2} covariance matrix of the entries \eqn{T_{ij}} for \eqn{i,j=1,\ldots,k} in the Type I-IV TCTs
+The \eqn{k^2 \times k^2} covariance matrix of
+the entries \eqn{T_{ij}} for \eqn{i,j=1,\ldots,k} in the Type I-IV TCTs
 }
 \description{
-Returns the covariance matrix of the entries \eqn{T_{ij}} for \eqn{i,j=1,\ldots,k} in the TCT for the types I, III, 
-and IV cell-specific tests. The covariance matrix is of dimension \eqn{k^2 \times k^2} and its entries are \eqn{cov(T_{ij},T_{kl})}
-when \eqn{T_{ij}} values are by default corresponding to the row-wise vectorization of TCT. 
-The argument \code{covN} must be the covariance matrix of \eqn{N_{ij}} values which are obtained from the NNCT by row-wise
+Returns the covariance matrix of the entries \eqn{T_{ij}} 
+for \eqn{i,j=1,\ldots,k} in the TCT for the types I, III, 
+and IV cell-specific tests. 
+The covariance matrix is of dimension \eqn{k^2 \times k^2} 
+and its entries are \eqn{cov(T_{ij},T_{kl})}
+when \eqn{T_{ij}} values are by default corresponding 
+to the row-wise vectorization of TCT. 
+The argument \code{covN} must be the covariance matrix of 
+\eqn{N_{ij}} values which are obtained from the NNCT by row-wise
 vectorization.
 The functions \code{cov.tctIII} and \code{cov.tct3} are equivalent.
-These covariances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.
+These covariances are valid under RL 
+or conditional on \eqn{Q} and \eqn{R} under CSR.
 
 See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}).
 }

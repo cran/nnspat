@@ -9,7 +9,7 @@
 .onAttach <- function(libname, pkgname) {
   start_message <- c( "      nnspat: functions for NN methods and\n\n",
                       "     their application for spatial patterns\n\n",
-                      "    by Dr. Elvan Ceyhan <elvanceyhan@gmail.com>\n\n"
+                      "    by Elvan Ceyhan <elvanceyhan@gmail.com>\n\n"
   )
   packageStartupMessage(start_message)
   invisible()

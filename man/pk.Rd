@@ -16,7 +16,8 @@ pk(n, n1, k)
 \item{k}{Integer specifying the number of NNs (of subject \eqn{i})}
 }
 \value{
-Returns the probability of \code{k} items selected from \code{n} items are from the class of interest
+Returns the probability of \code{k} items selected 
+from \code{n} items are from the class of interest
 (i.e., from the class whose size is \eqn{n_1})
 
 Returns the \eqn{p_k} value. See the description.

@@ -7,10 +7,10 @@
 rseg(n1, n2, r1, r2, X1.init = NULL, X2.init = NULL)
 }
 \arguments{
-\item{n1, n2}{Positive integers representing the number of class 1 and class 2 (i.e. \eqn{X_1} and \eqn{X_2}) points
+\item{n1, n2}{Positive integers representing the number of class 1 and class 2 (i.e., \eqn{X_1} and \eqn{X_2}) points
 to be generated under the segregation pattern.}
 
-\item{r1, r2}{Positive real numbers representing the radius of attraction within class, i.e. radius of the
+\item{r1, r2}{Positive real numbers representing the radius of attraction within class, i.e., radius of the
 circle center and generated points are from the same class.}
 
 \item{X1.init, X2.init}{2D points representing the initial points for the segregated classes, default=\code{NULL}
@@ -25,12 +25,12 @@ marked with crosses in the plot of the points.}
 A \code{list} with the elements
 \item{pat.type}{\code{"2c"} for the 2-class pattern of segregation of the two classes}
 \item{type}{The type of the point pattern}
-\item{parameters}{Radial (i.e. circular) within class radii of segregation, \code{r1} and \code{r2},
+\item{parameters}{Radial (i.e., circular) within class radii of segregation, \code{r1} and \code{r2},
 controlling the level of segregation}
 \item{lab}{The class labels of the generated points, it is 1 class 1 or \eqn{X_1} points and 
 2 for class 2 or \eqn{X_2} points}
 \item{init.cases}{The initial points for class 1 and class 2, one initial point for each class.}
-\item{gen.points}{The output set of generated points (i.e. class 1 and class 2 points) segregated 
+\item{gen.points}{The output set of generated points (i.e., class 1 and class 2 points) segregated 
 from each other.}
 \item{ref.points}{The input set of reference points, it is \code{NULL} for this function.}
 \item{desc.pat}{Description of the point pattern}

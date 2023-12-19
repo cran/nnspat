@@ -63,12 +63,12 @@ The number of cases will be \eqn{n_1} on the average if the argument \code{poiss
 We stop when we first exceed \eqn{n_1} cases. \code{rho} must be between \code{-prop/(1-prop)} and 1 for the infection
 probabilities to be valid.
 The \code{init.from.cases} is a logical argument (with default=\code{TRUE}) to determine the initial cases are from the
-cases or controls (the first initial case is always from controls), so if \code{TRUE}, initial cases (other than
+cases or controls (the first initial case is always from controls), so, if \code{TRUE}, initial cases (other than
 the first initial case) are selected randomly among the cases (as if they are contagious), otherwise,
 they are selected from controls as new cases infecting their \code{k}NNs.
 otherwise first entry is chosen as the case (or case is recorded as the first entry) in the data set, \code{dat}.  
 
-Algorithmically, first all dat points are treated as non-cases (i.e. controls or healthy subjects).
+Algorithmically, first all dat points are treated as non-cases (i.e., controls or healthy subjects).
 Then the function follows the following steps for labeling of the points:  
 
 step 0: \eqn{n_1} is generated randomly from a Poisson distribution with \code{mean = n*prop}, so that the 
@@ -89,7 +89,7 @@ the data, and for the remaining control points step 1 is applied where initial p
 based on the argument init.from.cases.
 
 step 3: The procedure ends when number of cases \eqn{n_c} exceeds \eqn{n_1}, and \eqn{n_c-n_1} of the cases (other than the
-initial cases) are randomly selected and relabeled as controls, i.e. 0s,
+initial cases) are randomly selected and relabeled as controls, i.e., 0s,
 so that the number of cases is exactly \eqn{n_1}.
 
 In the output cases are labeled as 1 and controls as 0.
@@ -98,7 +98,7 @@ with increasing rho, and infection probability decreases for increasing k in the
  
 See \insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat} for more detail where type I non-RL pattern is the 
 case 1 of non-RL pattern considered in Section 6 with \eqn{n_1} is
-fixed as a parameter rather than being generated from a Poisson distribution and \code{init=FALSEALSE}.
+fixed as a parameter rather than being generated from a Poisson distribution and \code{init=FALSE}.
 
 Although the non-RL pattern is described for the case-control setting, it can be adapted for any two-class
 setting when it is appropriate to treat one of the classes as cases or one of the classes behave like cases

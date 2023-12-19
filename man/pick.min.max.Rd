@@ -14,10 +14,10 @@ pick.min.max(ds, k = 1)
 \value{
 A \code{list} with the elements
 \item{min.dis}{The \code{k} smallest distances in \code{ds}}
-\item{ind.min.dis}{The indices (i.e. row numbers) of the \code{k} pairs of object which has the
+\item{ind.min.dis}{The indices (i.e., row numbers) of the \code{k} pairs of object which has the
 \code{k} smallest distances in \code{ds}}
 \item{max.dis}{The \code{k} largest distances in \code{ds}}
-\item{ind.max.dis}{The indices (i.e. row numbers) of the \code{k} pairs of object which has the
+\item{ind.max.dis}{The indices (i.e., row numbers) of the \code{k} pairs of object which has the
 \code{k} largest distances in \code{ds}}
 }
 \description{

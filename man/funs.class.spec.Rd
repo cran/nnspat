@@ -13,7 +13,7 @@ class.spec(dat, lab, type = "base", ...)
 \arguments{
 \item{ct}{A nearest neighbor contingency table, used in \code{class.spec.ct} only}
 
-\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct} ;
+\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct};
 used in \code{class.spec.ct} only.}
 
 \item{type}{The type of the class-specific tests with default=\code{"base"}. 
@@ -67,9 +67,9 @@ The argument \code{covN} must be covariance of row-wise (column-wise) vectorizat
 (\code{type="NN"}).
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} for each base class \eqn{i}, description of the 
-alternative with the corresponding null values (i.e. expected values) for the row (column) \eqn{i}, estimates for the entries in 
+alternative with the corresponding null values (i.e., expected values) for the row (column) \eqn{i}, estimates for the entries in 
 row (column) \eqn{i} for \eqn{i=1,\ldots,k} if \code{type="base"} (\code{type="NN"}).
-The functions also provide names of the test statistics, the method and the data set used.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis for each row (column) is that the corresponding \eqn{N_{ij}} entries in row (column) \eqn{i} are 
 equal to their expected values under RL or CSR.

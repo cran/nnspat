@@ -41,7 +41,7 @@ A \code{list} with the elements
 \item{statistic}{The \code{matrix} of \eqn{Z} test statistics for cell-specific tests}
 \item{stat.names}{Name of the test statistics}
 \item{p.value}{The \code{matrix} of \eqn{p}-values for the hypothesis test for the corresponding alternative}
-\item{LCL,UCL}{Matrix of Lower and Upper Confidence Levels for the entries \eqn{N_{ij}} in the NNCT 
+\item{LCL,UCL}{Matrix of lower and upper confidence levels for the entries \eqn{N_{ij}} in the NNCT 
 at the given confidence level \code{conf.level} and depends on the type of \code{alternative}.} 
 \item{conf.int}{The confidence interval for the estimates, it is \code{NULL} here, since we provide the \code{UCL} and \code{LCL}
 in \code{matrix} form.}
@@ -64,18 +64,18 @@ Two functions: \code{cell.spec.ss.ct} and \code{cell.spec.ss}.
 Both functions are objects of class \code{"cellhtest"} but with different arguments (see the parameter list below).
 Each one performs hypothesis tests of equality of the expected values of the 
 cell counts (i.e., entries) in the NNCT for \eqn{k \ge 2} classes.
-Each test is appropriate (i.e. have the appropriate asymptotic sampling distribution)
+Each test is appropriate (i.e., have the appropriate asymptotic sampling distribution)
 when that data is obtained by sparse sampling.
 
 Each cell-specific segregation test is based on the normal approximation of the entries
 in the NNCT and are due to \insertCite{pielou:1961;textual}{nnspat}.
 
 Each function yields a contingency table of the test statistics, \eqn{p}-values for the corresponding 
-alternative, expected values, lower and upper confidence levels, sample estimates (i.e. observed values)
-and null value(s) (i.e. expected values) for the \eqn{N_{ij}} values for \eqn{i,j=1,2,\ldots,k} and also names of the test
-statistics, estimates, null values and the method and the data set used.
+alternative, expected values, lower and upper confidence levels, sample estimates (i.e., observed values)
+and null value(s) (i.e., expected values) for the \eqn{N_{ij}} values for \eqn{i,j=1,2,\ldots,k} and also names of the test
+statistics, estimates, null values, the description of the test, and the data set used.
 
-The null hypothesis is that all \eqn{E(N_{ij})=n_i c_j /n} where \eqn{n_i} is the sum of row \eqn{i} (i.e. size of class \eqn{i})
+The null hypothesis is that all \eqn{E(N_{ij})=n_i c_j /n} where \eqn{n_i} is the sum of row \eqn{i} (i.e., size of class \eqn{i})
 \eqn{c_j} is the sum of column \eqn{j} in the \eqn{k \times k} NNCT for \eqn{k \ge 2}.
 In the output, the test statistic, \eqn{p}-value and the lower and upper confidence limits are valid only 
 for (properly) sparsely sampled data.

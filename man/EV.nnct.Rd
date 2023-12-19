@@ -13,8 +13,10 @@ EV.nnct(ct)
 A \code{matrix} of the expected values of cell counts in the NNCT.
 }
 \description{
-Returns a \code{matrix} of same dimension as, \code{ct}, whose entries are the expected cell counts of
-the NNCT under RL or CSR. The class sizes given as the row sums of \code{ct} and the row and column names are
+Returns a \code{matrix} of same dimension as, \code{ct}, 
+whose entries are the expected cell counts of
+the NNCT under RL or CSR. The class sizes given as 
+the row sums of \code{ct} and the row and column names are
 inherited from \code{ct}.
 
 See also (\insertCite{dixon:1994,ceyhan:eest-2010;textual}{nnspat}).

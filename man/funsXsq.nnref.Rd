@@ -49,7 +49,7 @@ Each one performs hypothesis tests of equality of the expected values of the
 diagonal cell counts (i.e., entries) under RL or CSR in the RCT for \eqn{k \ge 2} classes.
 That is, each test performs an overall NN reflexivity test (for the vector of entries \eqn{(1,1)} and \eqn{(2,2)},
 respectively, in the RCT) which is
-appropriate (i.e. have the appropriate asymptotic sampling distribution) for completely mapped data.
+appropriate (i.e., have the appropriate asymptotic sampling distribution) for completely mapped data.
 (See \insertCite{ceyhan:NNreflexivity2017;textual}{nnspat} for more detail).
 
 Each reflexivity test is based on the chi-squared approximation of the corresponding quadratic form
@@ -57,9 +57,9 @@ for the vector of diagonal entries
 in the RCT and are due to \insertCite{ceyhan:NNreflexivity2017;textual}{nnspat}.
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is 2, description of the 
-alternative with the corresponding null values (i.e. expected values) of the diagonal entries
-and also the sample estimates (i.e. observed values) of the diagonal entries of RCT (as a vector).
-The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) of the diagonal entries
+and also the sample estimates (i.e., observed values) of the diagonal entries of RCT (as a vector).
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that \eqn{E(N_{11},N_{22})=(R P_{aa},R P_{ab})} in the RCT, where \eqn{R} is the number of reflexive
 NNs and \eqn{P_{aa}} is the probability of any two points selected are being from the same class

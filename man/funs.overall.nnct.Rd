@@ -13,7 +13,7 @@ overall.nnct(dat, lab, ...)
 \arguments{
 \item{ct}{A nearest neighbor contingency table, used in \code{overall.nnct.ct} only}
 
-\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct} ;
+\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct};
 used in \code{overall.nnct.ct} only.}
 
 \item{dat}{The data set in one or higher dimensions, each row corresponds to a data point,
@@ -55,8 +55,8 @@ is chosen without loss of generality), to avoid ill-conditioning of the covarian
 in the quadratic form).
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{k(k-1)}, description of the 
-alternative with the corresponding null values (i.e. expected values) of NNCT entries, sample estimates (i.e. observed values) of the entries in NNCT.
-The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) of NNCT entries, sample estimates (i.e., observed values) of the entries in NNCT.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that all \eqn{N_{ij}} entries are equal to their expected values under RL or CSR.
 

@@ -12,7 +12,7 @@ rdiag.clust(n, k, d, sd = 1/6, distribution = c("uniform", "bvnormal"))
 \item{k}{A positive integer representing the number of clusters to be generated}
 
 \item{d}{Shift in the first diagonal indicating the level of clustering in the data. Larger absolute values in
-either direction (i.e. positive or negative) would yield stronger clustering.}
+either direction (i.e., positive or negative) would yield stronger clustering.}
 
 \item{sd}{The standard deviation of the components of the bivariate normal distribution with default \eqn{sd=1/6}, 
 used only when \code{distribution="bvnormal"}.}
@@ -40,10 +40,10 @@ where about \eqn{n/k} points belongs to each cluster.
 If \code{distribution="uniform"}, the points are uniformly generated in their square
 supports where one square is the unit square (i.e., with vertices \eqn{(0,0), (1,0), (1,1),(0,1)}), and 
 the others are unit squares translated \eqn{j \sqrt{2} d}  units along the first diagonal for \eqn{j=1,2,\ldots,k-1}
-(i.e. with vertices \eqn{(j d,j d), (1+j d,j d), (1+j d,1+j d),(j d,1+j d)}). 
+(i.e., with vertices \eqn{(j d,j d), (1+j d,j d), (1+j d,1+j d),(j d,1+j d)}). 
 
 If \code{distribution="bvnormal"}, the points are generated from the bivariate normal distribution with means equal to the
-centers of the above squares (i.e. for each cluster with \code{mean=}\eqn{((1+j d)/2,(1+j d)/2)} for \eqn{j=0,1,\ldots,k-1}
+centers of the above squares (i.e., for each cluster with \code{mean=}\eqn{((1+j d)/2,(1+j d)/2)} for \eqn{j=0,1,\ldots,k-1}
 and the covariance matrix \eqn{sd I_2}, where \eqn{I_2} is the \eqn{2 \times 2} identity matrix.
 
 Notice that the clusters are more separated, i.e., generated data indicates more clear clusters as \eqn{d} increases

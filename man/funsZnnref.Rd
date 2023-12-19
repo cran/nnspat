@@ -73,29 +73,29 @@ Each one performs hypothesis tests of equality of the expected values of the
 diagonal cell counts (i.e., entries) under RL or CSR in the RCT for \eqn{k \ge 2} classes.
 That is, each test performs NN reflexivity test (i.e., a test of self reflexivity and a test of
 mixed non-reflexivity, corresponding to entries \eqn{(1,1)} and \eqn{(2,2)}, respectively, in the RCT) which is
-appropriate (i.e. have the appropriate asymptotic sampling distribution) for completely mapped data.
+appropriate (i.e., have the appropriate asymptotic sampling distribution) for completely mapped data.
 (See \insertCite{ceyhan:NNreflexivity2017;textual}{nnspat} for more detail).
 
 The reflexivity test is based on the normal approximation of the diagonal entries
 in the RCT and are due to \insertCite{ceyhan:NNreflexivity2017;textual}{nnspat}.
 
 Each function yields the test statistics, \eqn{p}-values for the corresponding 
-alternative, expected values (i.e. null value(s)), confidence intervals and sample estimates (i.e. observed values)for the
+alternative, expected values (i.e., null value(s)), confidence intervals and sample estimates (i.e., observed values)for the
 self reflexivity and mixed non-reflexivity values (i.e., entries \eqn{(1,1)} and \eqn{(2,2)} values, respectively)
-in the RCT. Each function also gives names of the test statistics, null values and the method and the data
+in the RCT. Each function also gives names of the test statistics, null values, the description of the test, and the data
 set used.
 
 The null hypothesis is that \eqn{E(N_{11})=R P_{aa}} and \eqn{E(N_{22})=R P_{ab}} in the RCT, where \eqn{R} is the number of reflexive
 NNs and \eqn{P_{aa}} is the probability of any two points selected are being from the same class
 and \eqn{P_{ab}} is the probability of any two points selected are being from two different classes.
 
-The \code{Znnref} functions (i.e. \code{Znnref.ct} and \code{Znnref}) are different from 
-the \code{Znnself} functions (i.e. \code{\link{Znnself.ct}} and \code{\link{Znnself}}) and 
-from \code{Zself.ref} functions (i.e. \code{\link{Zself.ref.ct}} and \code{\link{Zself.ref}}), and also
-from \code{Znnself.sum} functions (i.e. \code{Znnself.sum.ct} and \code{Znnself.sum}).
+The \code{Znnref} functions (i.e., \code{Znnref.ct} and \code{Znnref}) are different from 
+the \code{Znnself} functions (i.e., \code{\link{Znnself.ct}} and \code{\link{Znnself}}) and 
+from \code{Zself.ref} functions (i.e., \code{\link{Zself.ref.ct}} and \code{\link{Zself.ref}}), and also
+from \code{Znnself.sum} functions (i.e., \code{Znnself.sum.ct} and \code{Znnself.sum}).
 \code{Znnref} functions are for testing the self reflexivity and mixed non-reflexivity
 using the diagonal entries in the RCT while \code{Znnself} functions are testing the self reflexivity at a
-class-specific level (i.e. for each class) using the first column in the SCCT, and
+class-specific level (i.e., for each class) using the first column in the SCCT, and
 \code{Zself.ref} functions are for testing the self reflexivity for the entire data set
 using entry \eqn{(1,1)} in RCT, and \code{Znnself.sum} functions are testing the cumulative species correspondence using
 the sum of the self column (i.e., the first column) in the SCCT.

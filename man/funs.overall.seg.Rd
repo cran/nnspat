@@ -64,8 +64,8 @@ The \code{type="dixon"} or \code{"nnct"} refers to Dixon's overall test of segre
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{k(k-1)} for type II and Dixon's test 
 and \eqn{(k-1)^2} for the other types, description of the 
-alternative with the corresponding null values (i.e. expected values) of TCT entries, sample estimates (i.e. observed values) of the entries in TCT.
-The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) of TCT entries, sample estimates (i.e., observed values) of the entries in TCT.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that all \eqn{N_{ij}} or \eqn{T_{ij}} entries for the specified type are equal to their expected values
 under RL or CSR, respectively.

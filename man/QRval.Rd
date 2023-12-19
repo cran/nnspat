@@ -7,7 +7,8 @@
 QRval(njr)
 }
 \arguments{
-\item{njr}{A \code{list} that is the output of \code{\link{Ninv}} (with first entry in the \code{list} is \code{vector} of number of shared NNs
+\item{njr}{A \code{list} that is the output of \code{\link{Ninv}} 
+(with first entry in the \code{list} is \code{vector} of number of shared NNs
 and second is the \eqn{R} value, number of reflexive points)}
 }
 \value{
@@ -16,13 +17,18 @@ A \code{list} with two elements
 \item{R}{the \eqn{R} value, the number of reflexive NNs}
 }
 \description{
-Returns the \eqn{Q} and \eqn{R} values where \eqn{Q} is the number of points shared as a NN
-by other points i.e. number of points that are NN of other points (which occurs when two or 
-more points share a NN, for data in any dimension) and \eqn{R} is the number of reflexive pairs
+Returns the \eqn{Q} and \eqn{R} values 
+where \eqn{Q} is the number of points shared as a NN
+by other points i.e., number of points 
+that are NN of other points (which occurs when two or 
+more points share a NN, for data in any dimension) and \eqn{R} is 
+the number of reflexive pairs
 where A and B are reflexive iff they are NN to each other.
 
-These quantities are used, e.g., in computing the variances and covariances of the entries of the
-nearest neighbor contingency tables used for Dixon's tests and other NNCT tests.
+These quantities are used, e.g., 
+in computing the variances and covariances of the entries of the
+nearest neighbor contingency tables used for Dixon's tests 
+and other NNCT tests.
 }
 \examples{
 #3D data points
@@ -55,8 +61,8 @@ Qvec(W)$q
 
 }
 \seealso{
-\code{\link{Qval}}, \code{\link{Qvec}}, \code{\link{sharedNN}}, \code{\link{Rval}} 
-and \code{\link{Ninv}}
+\code{\link{Qval}}, \code{\link{Qvec}}, \code{\link{sharedNN}}, 
+\code{\link{Rval}}, and \code{\link{Ninv}}
 }
 \author{
 Elvan Ceyhan

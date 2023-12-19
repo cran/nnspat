@@ -11,8 +11,9 @@ kthNNdist2cl(x, k, i, j, lab, within.class.ind = FALSE, is.ipd = TRUE, ...)
 kNNdist2cl(x, k, i, j, lab, within.class.ind = FALSE, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) 
+or a data set of points in matrix or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{k}{Integer specifying the number of NNs (of subjects).}
 
@@ -20,29 +21,44 @@ correspond to the rows (if \code{is.ipd = FALSEALSE}).}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
-\item{within.class.ind}{A logical parameter (default=\code{FALSE}). If \code{TRUE}, index numbering of subjects is within the class, from 1 to class size (i.e., \code{1:n_i}), 
-according to their order in the original data; otherwise, index numbering within class is just the indices
+\item{within.class.ind}{A logical parameter (default=\code{FALSE}). 
+If \code{TRUE}, index numbering of subjects is within the class, 
+from 1 to class size (i.e., \code{1:n_i}), 
+according to their order in the original data; 
+otherwise, index numbering within class is just the indices
 in the original data.}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, \code{x} is taken as the inter-point distance
+matrix, otherwise, \code{x} is taken as the data set with rows 
+representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
 \code{kthNNdist2cl} returns the \code{list} of elements
- \item{kth.nndist}{\eqn{n_i \times 3} matrix where \eqn{n_i} is the size of class \eqn{i}
-and first column is the subject index for class \eqn{i}, second column is the index of the \code{k}-th NN of class \eqn{i} 
-subjects among class \eqn{j} subjects and third column contains the corresponding \code{k}-th NN distances,
+ \item{kth.nndist}{\eqn{n_i \times 3} matrix 
+ where \eqn{n_i} is the size of class \eqn{i}
+and first column is the subject index for class \eqn{i}, 
+second column is the index of the \code{k}-th NN of class \eqn{i} 
+subjects among class \eqn{j} subjects and third column contains 
+the corresponding \code{k}-th NN distances,
 , returned by \code{Zseg.ind.ct} only} 
  \item{base.class}{label of base class} 
  \item{nn.class}{label of NN class} 
  \item{k}{value of \code{k} in \code{k}NN}
  
 \code{kNNdist2cl} returns the \code{list} of elements
- \item{ind.knndist}{\eqn{n_i \times (k+1)} matrix where \eqn{n_i} is the size of class \eqn{i}, first column is the indices of class \eqn{i}
- subjects, 2nd to \eqn{(k+1)}-st  columns are the indices of \eqn{k} NNs of class \eqn{i} subjects among class \eqn{j} subjects.}
-\item{knndist}{\eqn{n_i \times k} matrix where \eqn{n_i} is the size of class \eqn{i} and the columns are the \eqn{k}NN distances of class \eqn{i}
+ \item{ind.knndist}{\eqn{n_i \times (k+1)} matrix 
+ where \eqn{n_i} is the size of class \eqn{i}, 
+ first column is the indices of class \eqn{i}
+ subjects, 2nd to \eqn{(k+1)}-st  columns are 
+ the indices of \eqn{k} NNs of class \eqn{i} subjects 
+ among class \eqn{j} subjects.}
+\item{knndist}{\eqn{n_i \times k} matrix 
+where \eqn{n_i} is the size of class \eqn{i} and 
+the columns are the \eqn{k}NN distances of class \eqn{i}
 subjects to class \eqn{j} subjects.}
  \item{base.class}{label of base class} 
  \item{nn.class}{label of NN class} 
@@ -51,27 +67,48 @@ subjects to class \eqn{j} subjects.}
 \description{
 Two functions: \code{kthNNdist2cl} and \code{kNNdist2cl}.
 
-\code{kthNNdist2cl} returns the distances between subjects from class \eqn{i} and their \eqn{k^{th}} NNs from class \eqn{j}.
-The output is a \code{list} with first entry (\code{kth.nndist}) is an \eqn{n_i \times 3} matrix where \eqn{n_i} is the size of class \eqn{i}
+\code{kthNNdist2cl} returns the distances between subjects from 
+class \eqn{i} and their \eqn{k^{th}} NNs from class \eqn{j}.
+The output is a \code{list} with first entry (\code{kth.nndist}) 
+is an \eqn{n_i \times 3} matrix 
+where \eqn{n_i} is the size of class \eqn{i}
 and first column is the subject index for class \eqn{i},
-second column is the index of the \eqn{k^{th}} NN of class \eqn{i} subjects among class \eqn{j} subjects and third column 
-contains the corresponding \eqn{k^{th}} NN distances. The other entries in the \code{list} are labels of base class and NN class
-and the value of \code{k}, respectively.
+second column is the index of the \eqn{k^{th}} NN of 
+class \eqn{i} subjects among class \eqn{j} subjects and third column 
+contains the corresponding \eqn{k^{th}} NN distances. 
+The other entries in the \code{list} are labels of base class 
+and NN class and the value of \code{k}, respectively.
 
-\code{kNNdist2cl} returns the distances between subjects from class \eqn{i} and their \code{k} NNs from class \eqn{j}.
-The output is a \code{list} with first entry (\code{ind.knndist}) is an \eqn{n_i \times (k+1)} matrix where \eqn{n_i} is the size of class \eqn{i},
-first column is the indices of class \eqn{i} subjects, 2nd to \eqn{(k+1)}-st  columns are the indices of \code{k} NNs of class \eqn{i}
-subjects among class \eqn{j} subjects. The second \code{list} entry (\code{knndist}) is an \eqn{n_i \times k} matrix where \eqn{n_i} is the 
-size of class \eqn{i} and the columns are the \code{k}NN distances of class \eqn{i} subjects to class \eqn{j} subjects. 
-The other entries in the \code{list} are labels of base class and NN class and the value of \code{k}, respectively. 
+\code{kNNdist2cl} returns the distances between subjects from class \eqn{i} 
+and their \code{k} NNs from class \eqn{j}.
+The output is a \code{list} with first entry (\code{ind.knndist}) is 
+an \eqn{n_i \times (k+1)} matrix 
+where \eqn{n_i} is the size of class \eqn{i},
+first column is the indices of class \eqn{i} subjects, 
+second to \eqn{(k+1)}-st  columns are the indices of 
+\code{k} NNs of class \eqn{i} subjects among class \eqn{j} subjects. 
+The second \code{list} entry (\code{knndist}) is 
+an \eqn{n_i \times k} matrix where \eqn{n_i} is the 
+size of class \eqn{i} and the columns are
+the \code{k}NN distances of class \eqn{i} subjects 
+to class \eqn{j} subjects. 
+The other entries in the \code{list} are labels of base class 
+and NN class and the value of \code{k}, respectively. 
 
-The argument \code{within.class.ind} is a logical argument (default=\code{FALSE}) to determine the indexing of the class \eqn{i}
-subjects. If \code{TRUE}, index numbering of subjects is within the class, from 1 to class size (i.e., \code{1:n_i}), 
-according to their order in the original data; otherwise, index numbering within class is just the indices
+The argument \code{within.class.ind} is a logical argument 
+(default=\code{FALSE}) to determine the indexing of 
+the class \eqn{i} subjects. 
+If \code{TRUE}, index numbering of subjects is within the class, 
+from 1 to class size (i.e., \code{1:n_i}), 
+according to their order in the original data; otherwise, 
+index numbering within class is just the indices
 in the original data.
 
-The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) to determine the structure of the argument \code{x}.
-If \code{TRUE}, \code{x} is taken to be the inter-point distance (IPD) matrix, and if \code{FALSE}, \code{x} is taken to be the data set
+The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) 
+to determine the structure of the argument \code{x}.
+If \code{TRUE}, 
+\code{x} is taken to be the inter-point distance (IPD) matrix, 
+and if \code{FALSE}, \code{x} is taken to be the data set
 with rows representing the data points.
 }
 \examples{
@@ -100,7 +137,8 @@ ipd<-ipd.mat(X)
 #two class case
 clab<-sample(1:2,n,replace=TRUE) #class labels
 table(clab)
-kthNNdist2cl(ipd,3,1,2,clab) # here kthNNdist2cl(ipd,3,1,12,clab) #gives an error message
+kthNNdist2cl(ipd,3,1,2,clab) # here kthNNdist2cl(ipd,3,1,12,clab) 
+#gives an error message
 
 kthNNdist2cl(ipd,3,"1",2,clab)
 
@@ -132,11 +170,13 @@ clab<-sample(1:2,n,replace=TRUE) #class labels
 table(clab)
 
 kNNdist2cl(ipd,3,1,2,clab)
-kNNdist2cl(ipd,3,"1",2,clab) #here kNNdist2cl(ipd,3,"a",2,clab) #gives an error message
+kNNdist2cl(ipd,3,"1",2,clab) #here kNNdist2cl(ipd,3,"a",2,clab) 
+#gives an error message
 
 }
 \seealso{
-\code{\link{NNdist2cl}}, \code{\link{kthNNdist}} and \code{\link{kNNdist}}
+\code{\link{NNdist2cl}}, \code{\link{kthNNdist}},
+and \code{\link{kNNdist}}
 }
 \author{
 Elvan Ceyhan

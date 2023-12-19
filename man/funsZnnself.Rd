@@ -66,34 +66,34 @@ in the SCCT or diagonal entries in the NNCT under RL or CSR.}
 Two functions: \code{Znnself.ct} and \code{Znnself}.
 
 Both functions are objects of class \code{"cellhtest"} but with different arguments (see the parameter list below).
-Each one performs hypothesis tests of equality of the expected values of the self entries (i.e. first column)
+Each one performs hypothesis tests of equality of the expected values of the self entries (i.e., first column)
 in a species correspondence contingency table (SCCT) or the expected values of the diagonal entries \eqn{N_{ii}} in
 an NNCT to the ones under RL or CSR.
 That is, each performs NN self reflexivity for each class test which is appropriate 
-(i.e. have the appropriate asymptotic sampling distribution)
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data.
 NN self reflexivity is for each class can be viewed as a decomposition of species correspondence for
 each class.
 (See \insertCite{ceyhan:NNCorrespond2018;textual}{nnspat} for more detail).
 
-Each test is based on the normal approximation of the self entries (i.e. first column) in a
+Each test is based on the normal approximation of the self entries (i.e., first column) in a
 species correspondence contingency table (SCCT) or the diagonal entries \eqn{N_{ii}} in an NNCT and
 are due to \insertCite{ceyhan:NNCorrespond2018}{nnspat}.
 
 Each function yields a \code{vector} of length \eqn{k} of the test statistics, \eqn{p}-values for the corresponding 
-alternative, null values (i.e. expected values), sample estimates (i.e. observed values) of self entries 
+alternative, null values (i.e., expected values), sample estimates (i.e., observed values) of self entries 
 in the SCCT or diagonal entries in the NNCT, a \eqn{k \times 2} matrix of confidence intervals (where each row is the
 confidence interval for self entry \eqn{S_i} in the SCCT or diagonal entry \eqn{N_{ii}} in the NNCT) and
-also names of the test statistics, estimates, null values and the method and the data
+also names of the test statistics, estimates, null values, the description of the test, and the data
 set used.
 
 The null hypothesis is that all \eqn{E[S_i] = E[N_{ii}] = n_i(n_i - 1)/(n - 1)} where \eqn{n_i} is the size of class \eqn{i} and
 \eqn{n} is the data size.
 
-The \code{Znnself} functions (i.e. \code{Znnself.ct} and \code{Znnself}) are different from the \code{Znnref} functions 
-(i.e. \code{\link{Znnref.ct}} and \code{\link{Znnref}}) and from \code{Zself.ref} functions (i.e. \code{\link{Zself.ref.ct}} and \code{\link{Zself.ref}}) and also from
-\code{Znnself.sum} functions (i.e. \code{Znnself.sum.ct} and \code{Znnself.sum}).
-\code{Znnself} functions are testing the self reflexivity at a class-specific level (i.e. for each class) using the
+The \code{Znnself} functions (i.e., \code{Znnself.ct} and \code{Znnself}) are different from the \code{Znnref} functions 
+(i.e., \code{\link{Znnref.ct}} and \code{\link{Znnref}}) and from \code{Zself.ref} functions (i.e., \code{\link{Zself.ref.ct}} and \code{\link{Zself.ref}}) and also from
+\code{Znnself.sum} functions (i.e., \code{Znnself.sum.ct} and \code{Znnself.sum}).
+\code{Znnself} functions are testing the self reflexivity at a class-specific level (i.e., for each class) using the
 first column in the SCCT, while \code{Zself.ref} functions are for testing the self reflexivity for the entire data set
 using entry \eqn{(1,1)} in RCT, and \code{Znnref} functions are for testing the self reflexivity and mixed non-reflexivity
 using the diagonal entries in the RCT, and

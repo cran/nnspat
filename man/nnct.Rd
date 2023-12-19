@@ -7,36 +7,53 @@
 nnct(x, lab, ties = FALSE, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE})
+or a data set of points in matrix 
+or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
-\item{ties}{A logical argument (default=\code{FALSE}) to take ties into account or not. If \code{TRUE} a NN 
-contributes \eqn{1/m} to the NN count if it is one of the \eqn{m} tied NNs of a subject.}
+\item{ties}{A logical argument (default=\code{FALSE}) 
+to take ties into account or not. 
+If \code{TRUE} a NN 
+contributes \eqn{1/m} to the NN count 
+if it is one of the \eqn{m} tied NNs of a subject.}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, 
+\code{x} is taken as the inter-point distance matrix, 
+otherwise, \code{x} is taken as the data set with rows 
+representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, 
+such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
-Returns the \eqn{k \times k} NNCT where \eqn{k} is the number of classes in the data set.
+Returns the \eqn{k \times k} NNCT 
+where \eqn{k} is the number of classes in the data set.
 }
 \description{
-Returns the \eqn{k \times k} NNCT given the IPD matrix or data set \code{x} where \eqn{k} is 
-the number of classes in the data set.
+Returns the \eqn{k \times k} NNCT given the IPD matrix or data set \code{x} 
+where \eqn{k} is the number of classes in the data set.
 Rows and columns of the NNCT are labeled with the corresponding class labels.
 
-The argument \code{ties} is a logical argument (default=\code{FALSE}) to take ties into account or not.
+The argument \code{ties} is a logical argument 
+(default=\code{FALSE}) to take ties into account or not.
 If \code{TRUE} a NN 
-contributes \eqn{1/m} to the NN count if it is one of the \eqn{m} tied NNs of a subject.
+contributes \eqn{1/m} to the NN count 
+if it is one of the \eqn{m} tied NNs of a subject.
 
-The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) to determine the structure of the argument \code{x}.
-If \code{TRUE}, \code{x} is taken to be the inter-point distance (IPD) matrix, and if \code{FALSE}, \code{x} is taken to be the data set
+The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) 
+to determine the structure of the argument \code{x}.
+If \code{TRUE}, \code{x} is taken to be 
+the inter-point distance (IPD) matrix, 
+and if \code{FALSE}, \code{x} is taken to be the data set
 with rows representing the data points.
 
-See also (\insertCite{dixon:1994,dixon:NNCTEco2002,ceyhan:eest-2010,ceyhan:jkss-posthoc-2017;textual}{nnspat})
+See also 
+(\insertCite{dixon:1994,dixon:NNCTEco2002,ceyhan:eest-2010,ceyhan:jkss-posthoc-2017;textual}{nnspat})
 and the references therein.
 }
 \examples{
@@ -65,7 +82,8 @@ fcls1<-sample(c("a","b"),n,replace = TRUE)
 nnct(ipd,fcls1)
 
 fcls2<-sort(fcls1)
-nnct(ipd,fcls2) #ipd needs to be sorted as well, otherwise this result will not agree with fcls1
+nnct(ipd,fcls2) 
+#ipd needs to be sorted as well, otherwise this result will not agree with fcls1
 
 nnct(Y,fcls1,ties = TRUE,is.ipd = FALSE)
 
@@ -106,7 +124,8 @@ nnct(ipd,cls,ties = TRUE)
 \insertAllCited{}
 }
 \seealso{
-\code{\link{nnct.sub}}, \code{\link{scct}}, \code{\link{rct}}, and \code{\link{tct}}
+\code{\link{nnct.sub}}, \code{\link{scct}}, \code{\link{rct}}, 
+and \code{\link{tct}}
 }
 \author{
 Elvan Ceyhan

@@ -7,37 +7,52 @@
 sharedNNmc(x, lab, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) 
+or a data set of points in matrix or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix (IPD matrix), otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, \code{x} is taken as the inter-point distance
+matrix (IPD matrix), otherwise, 
+\code{x} is taken as the data set with rows representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, 
+such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
-\code{Qval} returns the \eqn{Q} value
-\code{Qvec} returns a \code{list} with two elements
+The function \code{Qval} returns the \eqn{Q} value
+
+The function \code{Qvec} returns a \code{list} with two elements
  \item{q}{the \eqn{Q} value, the number of shared NNs}
  \item{qvec}{the \code{vector} of \eqn{Q_j} values} 
-\code{sharedNN} returns a \code{matrix} with 2 rows, where first row is the \eqn{j} values and second row is
+ 
+The function \code{sharedNN} returns a \code{matrix} with 2 rows, 
+where first row is the \eqn{j} values and second row is
 the corresponding vector of \eqn{Q_j} values
-\code{Rval}{the \eqn{R} value, the number of reflexive NNs}
+
+The function \code{Rval} returns the \eqn{R} value, the number of reflexive NNs.
 
 Returns a \code{list} with two elements
- \item{Nv}{A \eqn{k}-row matrix of shared NNs by class where each row of the matrix is the vector of number of
- points with shared NNs \eqn{Q_i=(Q_{i0},Q_{i1},\ldots)} where \eqn{Q_{ij}} is the number of class \eqn{i} points that are NN
+ \item{Nv}{A \eqn{k}-row matrix of shared NNs by class 
+ where each row of the matrix is the vector of number of
+ points with shared NNs \eqn{Q_i=(Q_{i0},Q_{i1},\ldots)} 
+ where \eqn{Q_{ij}} is the number of class \eqn{i} points that are NN
  to \eqn{j} points.}
  \item{col.ind}{The \code{vector} of indices of columns with nonzero sums}
 }
 \description{
-Returns a \code{matrix} with \eqn{k} rows where each row is the vector of number of points with shared NNs,
-\eqn{Q_i=(Q_{i0},Q_{i1},\ldots)} where \eqn{Q_{ij}} is the number of class \eqn{i} points that are NN to class \eqn{j} points.
+Returns a \code{matrix} with \eqn{k} rows 
+where each row is the vector of number of points with shared NNs,
+\eqn{Q_i=(Q_{i0},Q_{i1},\ldots)} 
+where \eqn{Q_{ij}} is the number of class \eqn{i} points 
+that are NN to class \eqn{j} points.
 The function also returns the indices of columns with nonzero sums as a vector.
 
-The output matrix of shared NNs is used in testing symmetry in shared NN structure (i.e. \eqn{Q}-symmetry
+The output matrix of shared NNs is used in testing symmetry 
+in shared NN structure (i.e., \eqn{Q}-symmetry
 or Pielou's second type of symmetry), 
 e.g., in functions \code{\link{Qsym.ct}} and \code{\link{Qsym.test}}.
 

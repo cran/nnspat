@@ -15,7 +15,7 @@ column-wise. If \code{TRUE} it is column-wise else row-wise standardization.}
 \item{\dots}{Additional parameters to be passed on the \code{dist} function.}
 }
 \value{
-A distance matrix whose i,j-th entry is the distance between rows \eqn{i} and \eqn{j} of \code{x}, which is
+A distance matrix whose  \eqn{i,j}-th entry is the distance between rows \eqn{i} and \eqn{j} of \code{x}, which is
 standardized row-wise or column-wise.
 }
 \description{

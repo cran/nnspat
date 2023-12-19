@@ -13,7 +13,7 @@ overall.tct(dat, lab, type = "III", ...)
 \arguments{
 \item{ct}{A nearest neighbor contingency table, used in \code{overall.tct.ct} only}
 
-\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct} ;
+\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct};
 used in \code{overall.tct.ct} only.}
 
 \item{type}{The type of the overall segregation test, default=\code{"III"}.
@@ -59,8 +59,8 @@ In particular, type-II removes the last column, and all other types remove the l
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{k(k-1)} for type II test and \eqn{(k-1)^2} 
 for the other types, description of the 
-alternative with the corresponding null values (i.e. expected values) of TCT entries, sample estimates (i.e. observed values) of the entries in TCT.
-The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) of TCT entries, sample estimates (i.e., observed values) of the entries in TCT.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that all Tij entries for the specified type are equal to their expected values
 under RL or CSR.

@@ -9,21 +9,30 @@ seg.ind(ct, inf.corr = FALSE)
 \arguments{
 \item{ct}{A contingency table, in particular an NNCT}
 
-\item{inf.corr}{A logical argument (default=\code{FALSE}). If \code{TRUE}, indices are modified so that 
-they are finite and if \code{FALSE} the above definition in the description is used.}
+\item{inf.corr}{A logical argument (default=\code{FALSE}). 
+If \code{TRUE}, indices are modified so that 
+they are finite and 
+if \code{FALSE} the above definition in the description is used.}
 }
 \value{
-Returns a \code{matrix} of segregation indices which is of the same dimension as \code{ct}.
+Returns a \code{matrix} of segregation indices 
+which is of the same dimension as \code{ct}.
 }
 \description{
-Returns Dixon's segregation indices in matrix form based on entries of the NNCT, \code{ct}. 
-Segregation index for cell \eqn{i,j} is defined as \eqn{log(N_{ii}(n-n_i)/((n_i-N_{ii})(n_i-1))} if \eqn{i=j}
+Returns Dixon's segregation indices in matrix form based on 
+entries of the NNCT, \code{ct}. 
+Segregation index for cell \eqn{i,j} is defined as 
+\eqn{log(N_{ii}(n-n_i)/((n_i-N_{ii})(n_i-1))} if \eqn{i=j}
 and
-as \eqn{log(N_{ij}(n-n_j-1)/((n_i-N_{ij})(n_j))} if \eqn{i \ne j}. 
+as \eqn{log(N_{ij}(n-n_j-1)/((n_i-N_{ij})(n_j))} 
+if \eqn{i \ne j}. 
 See (\insertCite{dixon:NNCTEco2002,ceyhan:SiM-seg-ind2014;textual}{nnspat}).
 
-The argument \code{inf.corr} is a logical argument (default=\code{FALSE}) to avoid \eqn{\pm \infty} for the segregation
-indices. If \code{TRUE} indices are modified so that they are finite and if \code{FALSE} the above definition is used. 
+The argument \code{inf.corr} is a logical argument 
+(default=\code{FALSE}) to avoid \eqn{\pm \infty} 
+for the segregation indices. 
+If \code{TRUE} indices are modified so that 
+they are finite and if \code{FALSE} the above definition is used. 
 (See \insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat} for more detail).
 }
 \examples{
@@ -60,8 +69,8 @@ seg.ind(ct,inf.corr = TRUE)
 
 }
 \seealso{
-\code{\link{Pseg.coeff}}, \code{\link{seg.coeff}}, \code{\link{Zseg.ind}}
-and \code{\link{Zseg.ind.ct}}
+\code{\link{Pseg.coeff}}, \code{\link{seg.coeff}},
+ \code{\link{Zseg.ind}}, and \code{\link{Zseg.ind.ct}}
 }
 \author{
 Elvan Ceyhan

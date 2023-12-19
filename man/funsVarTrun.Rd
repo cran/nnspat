@@ -92,6 +92,4 @@ varTrun.sim(Y,fcls,Nsim=Nmc,case.lab="a")
 }
 \author{
 Elvan Ceyhan
-
-Elvan Ceyhan
 }

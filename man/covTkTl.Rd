@@ -11,9 +11,7 @@ covTkTl(dat, n1, k, l, nonzero.mat = TRUE, ...)
 
 \item{n1}{Number of cases}
 
-\item{k}{Integers specifying the number of NNs (of subjects \eqn{i} and \eqn{m} in \eqn{a_{ij}(k) a_{mj}(l)}).}
-
-\item{l}{Integers specifying the number of NNs (of subjects \eqn{i} and \eqn{m} in \eqn{a_{ij}(k) a_{mj}(l)}).}
+\item{k, l}{Integers specifying the number of NNs (of subjects \eqn{i} and \eqn{m} in \eqn{a_{ij}(k) a_{mj}(l)}).}
 
 \item{nonzero.mat}{A logical argument (default is \code{TRUE}) to determine whether the \eqn{A} matrix or the matrix of
 nonzero locations of the \eqn{A} matrix will be used in the computation of \eqn{N_s} and \eqn{N_t}.

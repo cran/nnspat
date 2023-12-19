@@ -7,24 +7,30 @@
 euc.dist(x, y)
 }
 \arguments{
-\item{x, y}{Vectors, matrices or data frames (both should be of the same type).}
+\item{x, y}{Vectors, matrices or data frames 
+(both should be of the same type).}
 }
 \value{
 Euclidean distance between \code{x} and \code{y}
 }
 \description{
-Returns the Euclidean distance between \code{x} and \code{y} which can be vectors
-or matrices or data frames of any dimension (\code{x} and \code{y} should be of same dimension).
+Returns the Euclidean distance between \code{x} and \code{y} 
+which can be vectors #' or matrices or data frames of
+ any dimension (\code{x} and \code{y} should be of same dimension).
 
-This function is equivalent to \code{\link[pcds]{Dist}} function in the \code{pcds} package but is 
-different from the \code{\link[stats]{dist}} function in the \code{stats} package of the standard R 
-distribution.
-\code{dist} requires its argument to be a data matrix and \code{\link[stats]{dist}} computes and returns the distance matrix computed
-by using the specified distance measure to compute the distances between the rows of a data matrix
+This function is equivalent to \code{\link[pcds]{Dist}} function 
+in the \code{pcds} package but is 
+different from the \code{\link[stats]{dist}} function 
+in the \code{stats} package of the standard R distribution.
+\code{dist} requires its argument to be a data matrix and 
+\code{\link[stats]{dist}} computes and returns 
+he distance matrix computed by using the specified distance measure 
+to compute the distances between the rows of a data matrix
 (\insertCite{S-Book:1998;textual}{nnspat}),
 while \code{euc.dist} needs two arguments to find the distances between. 
 For two data matrices \code{A} and \code{B},
-\code{dist(rbind(as.vector(A),as.vector(B)))} and \code{euc.dist(A,B)} yield the same result.
+\code{dist(rbind(as.vector(A),as.vector(B)))} and 
+\code{euc.dist(A,B)} yield the same result.
 }
 \examples{
 B<-c(1,0); C<-c(1/2,sqrt(3)/2);

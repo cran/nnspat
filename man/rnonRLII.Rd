@@ -84,7 +84,7 @@ and for a given \code{rho}, \code{pow} must be \eqn{>  \ln(rho)/\ln(k)}.
 If \code{rand.init=TRUE}, first \eqn{k_0} entries are chosen as the initial cases in the data set,
 \code{dat}, otherwise, \eqn{k_0} initial cases are selected randomly among the data points.
 
-Algorithmically, first all dat points are treated as non-cases (i.e. controls or healthy subjects).
+Algorithmically, first all dat points are treated as non-cases (i.e., controls or healthy subjects).
 Then the function follows the following steps for labeling of the points: 
 
 step 0: \eqn{n_1} is generated randomly from a Poisson distribution with \code{mean = round(n*ult.prop,0)}, so that the 
@@ -102,12 +102,12 @@ decreasing infection probabilities \code{prob=rho*(1/(1:k))^pow}. See the descri
 of the parameters in the \code{prob}.
 
 step 3: The procedure ends when number of cases \eqn{n_c} exceeds \eqn{n_1}, and \eqn{n_c-n_1} of the cases (other than the
-initial cases) are randomly selected and relabeled as controls, i.e. 0s,
+initial cases) are randomly selected and relabeled as controls, i.e., 0s,
 so that the number of cases is exactly \eqn{n_1}.
 
 Note that the infection probabilities of the \code{k}NNs of each initial case increase
 with increasing rho; and probability of infection decreases as further NNs are considered from 
-a contagious case (i.e. as \code{k} increases in the \code{k}NNs).
+a contagious case (i.e., as \code{k} increases in the \code{k}NNs).
 
 See \insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat} for more detail where type II non-RL pattern is the 
 case 2 of non-RL pattern considered in Section 6 with \eqn{n_1} is

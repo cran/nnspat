@@ -25,7 +25,7 @@ for types I, C, U and G association patterns (see the description above).}
 \value{
 A \code{list} with the elements
 \item{pat.type}{=\code{"ref.gen"} for the bivariate pattern of association of class 2 points with the reference points
-(i.e. \eqn{X_1}), indicates reference points are required to be entered as an argument in the function}
+(i.e., \eqn{X_1}), indicates reference points are required to be entered as an argument in the function}
 \item{type}{The type of the point pattern}
 \item{parameters}{The \code{asc.par} value specifying the level of association}
 \item{ref.points}{The input set of reference points \eqn{X_1}, i.e., points with which generated class 2 points
@@ -33,16 +33,16 @@ are associated.}
 \item{desc.pat}{Description of the point pattern}
 \item{mtitle}{The \code{"main"} title for the plot of the point pattern}
 \item{num.points}{The \code{vector} of two numbers, which are the number of generated class 2 points and
-the number of reference (i.e. \eqn{X_1}) points.}
+the number of reference (i.e., \eqn{X_1}) points.}
 \item{xlimit,ylimit}{The possible ranges of the \eqn{x}- and \eqn{y}-coordinates of the generated and the reference points}
 }
 \description{
 An object of class \code{"SpatPatterns"}.
 
-Generates \code{n_2} 2D points associated with the given set of points (i.e. reference points) \eqn{X_1} in the
+Generates \code{n_2} 2D points associated with the given set of points (i.e., reference points) \eqn{X_1} in the
 \code{type=type} fashion with the parameter=asc.par which specifies the level of association.
 The generated points are intended to be from a different class, say class 2 (or \eqn{X_2} points) 
-than the reference (i.e. \eqn{X_1} points, say class 1 points, denoted as \code{X1} as an argument 
+than the reference (i.e., \eqn{X_1} points, say class 1 points, denoted as \code{X1} as an argument 
 of the function), say class 1 points). 
 
 To generate \eqn{n_2} (denoted as \code{n2} as an argument of the function)\eqn{X_2} points, 

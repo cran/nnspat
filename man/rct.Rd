@@ -8,7 +8,7 @@ rct(x, lab, is.ipd = TRUE, ...)
 }
 \arguments{
 \item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 

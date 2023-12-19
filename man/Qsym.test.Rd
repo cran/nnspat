@@ -8,7 +8,7 @@ Qsym.test(x, lab, is.ipd = TRUE, combine = TRUE, ...)
 }
 \arguments{
 \item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
@@ -16,7 +16,7 @@ correspond to the rows (if \code{is.ipd = FALSEALSE}).}
 matrix (IPD matrix), otherwise, \code{x} is taken as the data set with rows representing the data points.}
 
 \item{combine}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, 
-the cells in column 3 or columns to the left are merged in the QCT, so \eqn{Q_2}, \eqn{Q_3} etc. are pooled, so the column
+the cells in column 3 or columns to the left are merged in the QCT, so, \eqn{Q_2}, \eqn{Q_3} etc. are pooled, so, the column
 labels are \eqn{Q_0}, \eqn{Q_1} and \eqn{Q_2} with the last one is actually sum of \eqn{Q_j} for \eqn{j \ge 2} in the QCT. 
 If \code{FALSE}, the function does not perform the pooling of the cells.}
 
@@ -46,7 +46,7 @@ That is, the test performs Pielou's second type of NN symmetry test which is als
 test on the QCT (\insertCite{pielou:1961;textual}{nnspat}).
 Pielou's second type of NN symmetry is the symmetry in the shared NN structure for all classes, which is also 
 called \eqn{Q}-symmetry.
-The test is appropriate (i.e. have the appropriate asymptotic sampling distribution)
+The test is appropriate (i.e., have the appropriate asymptotic sampling distribution)
 provided that data is obtained by sparse sampling, although simulations suggest it seems to work for
 completely mapped data as well.
 (See \insertCite{ceyhan:SWJ-spat-sym2014;textual}{nnspat} for more detail).
@@ -58,15 +58,15 @@ with rows representing the data points.
 The argument combine is a logical argument (default=\code{TRUE}) to determine whether to combine the 3rd column 
 and the columns to the left.
 If \code{TRUE}, this function pools the cells 3 or larger together for \eqn{k} classes in the QCT, 
-so \eqn{Q_2}, \eqn{Q_3} etc. are pooled, so the column
+so, \eqn{Q_2}, \eqn{Q_3} etc. are pooled, so, the column
 labels are \eqn{Q_0}, \eqn{Q_1} and \eqn{Q_2} with the last one is actually sum of \eqn{Q_j} for \eqn{j \ge 2} in the QCT.
 If \code{FALSE}, the function does not perform the pooling of the cells.
 
 The function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{(k-1)(n_c-1)} where \eqn{n_c} is the number of
 columns in QCT (which reduces to \eqn{2(k-1)}, if \code{combine=TRUE}). It also provides the description of
-the alternative with the corresponding null values (i.e. expected values) of the entries of the QCT and also the sample estimates 
+the alternative with the corresponding null values (i.e., expected values) of the entries of the QCT and also the sample estimates 
 of the entries of QCT (i.e., the observed QCT).
-The function also provides names of the test statistics, the method and the data set used.
+The function also provides names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is the symmetry in the shared NN structure for each class, that is,
 all \eqn{E(Q_{ij})=n_i Q_j/n} where \eqn{n_i} the size of class \eqn{i} and \eqn{Q_j} is the sum of column \eqn{j} 

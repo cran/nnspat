@@ -15,18 +15,25 @@ var.tct(ct, covN, type = "III")
 equivalently \code{1-4}, respectively.}
 }
 \value{
-A \code{matrix} of same dimension as, \code{ct}, whose entries are the variances of
+A \code{matrix} of same dimension as, \code{ct}, 
+whose entries are the variances of
 the entries in the TCT for the corresponding type of cell-specific test.
 The row and column names are inherited from \code{ct}.
 }
 \description{
-Returns the variances of \eqn{T_{ij}} values for \eqn{i,j=1,\ldots,k} in the TCT in matrix form which
+Returns the variances of \eqn{T_{ij}} values 
+for \eqn{i,j=1,\ldots,k} in the TCT in matrix form which
 is of the same dimension as TCT for types I-IV tests. 
-The argument \code{covN} must be the covariance between \eqn{N_{ij}} values which are obtained from the NNCT by row-wise
-vectorization. type determines the type of the test for which variances are to be computed, with default=\code{"III"}.
-These variances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.
+The argument \code{covN} must be the covariance 
+between \eqn{N_{ij}} values which are obtained 
+from the NNCT by row-wise
+vectorization. type determines the type of the test
+for which variances are to be computed, with default=\code{"III"}.
+These variances are valid under RL 
+or conditional on \eqn{Q} and \eqn{R} under CSR.
 
-See also (\insertCite{ceyhan:SJScorrected2010,ceyhan:jkss-posthoc-2017;textual}{nnspat}).
+See also 
+(\insertCite{ceyhan:SJScorrected2010,ceyhan:jkss-posthoc-2017;textual}{nnspat}).
 }
 \examples{
 n<-20  #or try sample(1:20,1)
@@ -68,7 +75,8 @@ var.tct(ct,covN,2)
 \insertAllCited{}
 }
 \seealso{
-\code{\link{var.nnct}}, \code{\link{var.tctI}}, \code{\link{var.tctIII}}, \code{\link{var.tctIV}} 
+\code{\link{var.nnct}}, \code{\link{var.tctI}}, 
+\code{\link{var.tctIII}}, \code{\link{var.tctIV}} ,
 and \code{\link{cov.tct}}
 }
 \author{

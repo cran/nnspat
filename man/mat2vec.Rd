@@ -9,18 +9,23 @@ mat2vec(ct, byrow = TRUE)
 \arguments{
 \item{ct}{A matrix, in particular a contingency table}
 
-\item{byrow}{A logical argument (default=\code{TRUE}). If \code{TRUE}, rows of \code{ct} are appended to obtain the vector
+\item{byrow}{A logical argument (default=\code{TRUE}). 
+If \code{TRUE}, rows of \code{ct} are appended to obtain the vector
 and if \code{FALSE} columns of \code{ct} are appended to obtain the vector.}
 }
 \value{
 A \code{list} with two elements
-\item{vec}{The \code{vector}ized form the matrix \code{ct}, by default appending the rows of \code{ct}}
-\item{ind}{The \eqn{k^2 \times 2} matrix of entry indices (in the original matrix \code{ct}) whose i-th row corresponds
-to the i-th entry in \code{vec}.}
+\item{vec}{The \code{vector}ized form the matrix \code{ct}, 
+by default appending the rows of \code{ct}}
+\item{ind}{The \eqn{k^2 \times 2} matrix of 
+entry indices (in the original matrix \code{ct}) 
+whose i-th row corresponds to the i-th entry in \code{vec}.}
 }
 \description{
-Converts the contingency table (or any matrix) \code{ct} to a \code{vector} by default row-wise (i.e., by appending
-each row one after the other) or column-wise, and also returns the entry indices (in the original matrix \code{ct})
+Converts the contingency table (or any matrix) \code{ct} to a \code{vector} 
+by default row-wise (i.e., by appending
+each row one after the other) or column-wise, 
+and also returns the entry indices (in the original matrix \code{ct})
 in a \eqn{k^2 \times 2} matrix
 }
 \examples{

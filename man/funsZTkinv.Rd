@@ -84,7 +84,7 @@ If asymptotic normality holds, it seems a larger sample size would be needed bef
 an effective approximation.
 Hence the simulation-based test \code{ZTkinv.sim} is recommended for use to be safe. 
 When \code{ZTkinv} is used, this is also highlighted with the warning "asymptotic normality of \eqn{T_k^{inv}} is not yet established, 
-so simulation-based test is recommended".
+so, simulation-based test is recommended".
 
 All arguments are common for both functions, except for \dots, Nvar.sim which are used in \code{ZTkinv} only,
 and \code{Nsim}, which is used in \code{ZTkinv.sim} only.

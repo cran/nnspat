@@ -25,13 +25,13 @@ used in \code{varNii} only}
 \item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function, used in \code{varNii} only}
 }
 \value{
-A \code{vector} of length \eqn{k} whose entries are the variances of the self entries (i.e. first column) in a
+A \code{vector} of length \eqn{k} whose entries are the variances of the self entries (i.e., first column) in a
 species correspondence contingency table (SCCT) or of the diagonal entries in an NNCT.
 }
 \description{
 Two functions: \code{varNii.ct} and \code{varNii}.
 
-Both functions return a \code{vector} of length \eqn{k} of variances of the self entries (i.e. first column) in a
+Both functions return a \code{vector} of length \eqn{k} of variances of the self entries (i.e., first column) in a
 species correspondence contingency table (SCCT) or the variances of the diagonal entries \eqn{N_{ii}} in an NNCT,
 but have different arguments (see the parameter list below).
 These variances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.

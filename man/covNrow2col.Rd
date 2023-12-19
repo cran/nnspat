@@ -2,24 +2,30 @@
 % Please edit documentation in R/NNCTFunctions.R
 \name{covNrow2col}
 \alias{covNrow2col}
-\title{Conversion of the Covariance Matrix of the Row-wise Vectorized Cell Counts to Column-wise
-Vectorized Cell Counts in an NNCT}
+\title{Conversion of the Covariance Matrix of the Row-wise Vectorized Cell Counts 
+to Column-wise Vectorized Cell Counts in an NNCT}
 \usage{
 covNrow2col(covN)
 }
 \arguments{
-\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized cell counts of NNCT, \code{ct}.}
+\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise 
+vectorized cell counts of NNCT, \code{ct}.}
 }
 \value{
-The \eqn{k^2 \times k^2} covariance matrix of column-wise vectorized cell counts \eqn{N_{ij}} for 
+The \eqn{k^2 \times k^2} covariance matrix of column-wise 
+vectorized cell counts \eqn{N_{ij}} for 
 \eqn{i,j=1,\ldots,k} in the NNCT, \code{ct}.
 }
 \description{
-Converts the \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized cell counts \eqn{N_{ij}} for \eqn{i,j=1,\ldots,k} 
-in the NNCT, \code{ct} to the covariance matrix of column-wise vectorized cell counts.
-In the output, the covariance matrix entries are \eqn{cov(N_{ij},N_{kl})} when \eqn{N_{ij}} values are
+Converts the \eqn{k^2 \times k^2} covariance matrix 
+of row-wise vectorized cell counts \eqn{N_{ij}} for \eqn{i,j=1,\ldots,k} 
+in the NNCT, \code{ct} to the covariance matrix 
+of column-wise vectorized cell counts.
+In the output, the covariance matrix entries are \eqn{cov(N_{ij},N_{kl})}
+when \eqn{N_{ij}} values are
 corresponding to the column-wise vectorization of \code{ct}.
-These covariances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.
+These covariances are valid under RL or 
+conditional on \eqn{Q} and \eqn{R} under CSR.
 
 See also 
 (\insertCite{dixon:1994,dixon:NNCTEco2002,ceyhan:eest-2010,ceyhan:jkss-posthoc-2017;textual}{nnspat}).

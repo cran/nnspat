@@ -56,7 +56,7 @@ An object of class \code{"cellhtest"} performing hypothesis test of equality of 
 off-diagonal cell counts (i.e., entries) for each pair \eqn{i,j} of classes under RL or CSR in the NNCT
 for \eqn{k \ge 2} classes.
 That is, the test performs Dixon's or Pielou's (first type of) NN symmetry test which is appropriate 
-(i.e. have the appropriate asymptotic sampling distribution)
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data or for sparsely sample data, respectively.
 (See \insertCite{pielou:1961,dixon:1994,ceyhan:SWJ-spat-sym2014;textual}{nnspat} for more detail).
 
@@ -66,9 +66,9 @@ The symmetry test is based on the normal approximation of the difference of the 
 in the NNCT and are due to \insertCite{pielou:1961,dixon:1994;textual}{nnspat}.
 
 The function yields a contingency table of the test statistics, \eqn{p}-values for the corresponding 
-alternative, expected values (i.e. null value(s)), lower and upper confidence levels and sample estimate
+alternative, expected values (i.e., null value(s)), lower and upper confidence levels and sample estimate
 for the \eqn{N_{ij}-N_{ji}} values for \eqn{i \ne j} (all in the upper-triangular form except for the null value, which is 0
-for all pairs) and also names of the test statistics, estimates, null values and the method and the data
+for all pairs) and also names of the test statistics, estimates, null values, the description of the test, and the data
 set used.
 
 The null hypothesis is that all \eqn{E(N_{ij})=E(N_{ji})} for \eqn{i \ne j} in the \eqn{k \times k} NNCT (i.e., symmetry in the 

@@ -20,9 +20,12 @@ col.sum(ct)
 \description{
 Two functions: \code{row.sum} and \code{col.sum}.
 
-\code{row.sum} returns the row sums of a given matrix (in particular a contingency table) as a vector and 
-\code{col.sum} returns the column sums of a given matrix as a vector. \code{row.sum} is equivalent to 
-\code{\link[base]{rowSums}} function and \code{col.sum} is equivalent to \code{\link[base]{colSums}}
+\code{row.sum} returns the row sums of a given matrix 
+(in particular a contingency table) as a vector and 
+\code{col.sum} returns the column sums of a given matrix as a vector. 
+\code{row.sum} is equivalent to 
+\code{\link[base]{rowSums}} function and 
+\code{col.sum} is equivalent to \code{\link[base]{colSums}}
 function in the \code{base} package.
 }
 \examples{

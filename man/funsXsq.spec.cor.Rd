@@ -13,7 +13,7 @@ Xsq.spec.cor(dat, lab, ...)
 \arguments{
 \item{ct}{The NNCT or SCCT, used in \code{Xsq.spec.cor.ct} only}
 
-\item{covSC}{The covariance matrix for the self entries (i.e. first column) in the SCCT
+\item{covSC}{The covariance matrix for the self entries (i.e., first column) in the SCCT
 or the diagonal entries in the NNCT, used in \code{Xsq.spec.cor.ct} only. Usually output of the functions 
 \code{\link{covNii.ct}} or \code{\link{covNii}}.}
 
@@ -45,11 +45,11 @@ in the SCCT or diagonal entries in the NNCT under RL or CSR.}
 \description{
 Two functions: \code{Xsq.spec.cor.ct} and \code{Xsq.spec.cor}.
 
-Each one performs hypothesis tests of (simultaneous) equality of the self entries (i.e. first column) in a
+Each one performs hypothesis tests of (simultaneous) equality of the self entries (i.e., first column) in a
 species correspondence contingency table (SCCT) or the expected values of the diagonal entries \eqn{N_{ii}} in an NNCT
 to the ones under RL or CSR.
 That is, each performs the overall species correspondence test which is appropriate 
-(i.e. have the appropriate asymptotic sampling distribution)
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data.
 (See \insertCite{ceyhan:NNCorrespond2018;textual}{nnspat} for more detail).
 
@@ -58,9 +58,9 @@ in a species correspondence contingency table (SCCT) or the diagonal entries \eq
 are due to \insertCite{ceyhan:NNCorrespond2018}{nnspat}.
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{k}, description of the 
-alternative with the corresponding null values (i.e. expected values) of the self entries (i.e. first column) in the SCCT
-or the diagonal entries in the NNCT and also the sample estimates (i.e. observed values) of these entries.
-The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) of the self entries (i.e., first column) in the SCCT
+or the diagonal entries in the NNCT and also the sample estimates (i.e., observed values) of these entries.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that all 
 \eqn{E[S_1,S_2,\ldots,S_k] = E[N_{11},N_{22},\ldots,N_{kk}] = ((n_1(n_1 - 1)/(n - 1),(n_2(n_2 - 1)/(n - 1),\ldots,(n_k(n_k - 1)/(n - 1) )}

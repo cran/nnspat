@@ -7,38 +7,58 @@
 NNsub(ss, x, i, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{ss}{indices of subjects (i.e., row indices in the data set) among with the NN of subject is to be found}
+\item{ss}{indices of subjects (i.e., row indices in the data set) 
+among with the NN of subject is to be found}
 
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) 
+or a data set of points in matrix or 
+data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
-\item{i}{index of (i.e., row number for) the subject whose NN is to be found.}
+\item{i}{index of (i.e., row number for) the subject 
+whose NN is to be found.}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, \code{x} is taken as the inter-point distance matrix, 
+otherwise, \code{x} is taken as the data set 
+with rows representing the data points.}
 
-\item{...}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{...}{are for further arguments, 
+such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
 Returns a \code{list} with the elements
  \item{base.ind}{index of the base subject}
- \item{ss.ind}{the index (indices) i.e. row number(s) of the NN of subject \eqn{i} among the subjects with indices
+ \item{ss.ind}{the index (indices) i.e., 
+ row number(s) of the NN of subject \eqn{i} 
+ among the subjects with indices
 provided in \code{ss}}
- \item{ss.dis}{distance from subject \eqn{i} to its NN among the subjects in \code{ss}}
+ \item{ss.dis}{distance from subject \eqn{i} 
+ to its NN among the subjects in \code{ss}}
 }
 \description{
-Returns the index (indices) of the nearest neighbor(s) of subject \eqn{i} (other than subject \eqn{i}) among the indices of points 
-provided in the subsample \code{ss} using the given data set or IPD matrix \code{x}. The indices in \code{ss} determine the
+Returns the index (indices) of the nearest neighbor(s) of subject \eqn{i} 
+(other than subject \eqn{i}) among the indices of points 
+provided in the subsample \code{ss} using 
+the given data set or IPD matrix \code{x}. 
+The indices in \code{ss} determine the
 columns of the IPD matrix to be used in this function. 
-It will yield a \code{vector} if there are ties, and subject indices correspond to rows (i.e. rows \code{1:n} ) if \code{x} 
-is the data set and to rows or columns if \code{x} is the IPD matrix.  
+It will yield a \code{vector} if there are ties, 
+and subject indices correspond to rows 
+(i.e., rows \code{1:n} ) if \code{x} 
+is the data set and to rows or columns 
+if \code{x} is the IPD matrix.  
 
-The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) to determine the structure of the argument \code{x}.
-If \code{TRUE}, \code{x} is taken to be the inter-point distance (IPD) matrix, and if \code{FALSE}, \code{x} is taken to be the data set
+The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) 
+to determine the structure of the argument \code{x}.
+If \code{TRUE}, \code{x} is taken to be 
+the inter-point distance (IPD) matrix, 
+and if \code{FALSE}, \code{x} is taken to be the data set
 with rows representing the data points.
 }
 \examples{
-#3D data points bura
+#3D data points 
 n<-20  #or try sample(1:20,1)
 Y<-matrix(runif(3*n),ncol=3)
 ipd<-ipd.mat(Y)

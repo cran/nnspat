@@ -20,12 +20,12 @@ with default is \code{1} for both}
 with default=0.}
 }
 \value{
-The value of the probability density function (i.e. density) of the bivariate normal distribution
+The value of the probability density function (i.e., density) of the bivariate normal distribution
 at the specified point \code{X}, with mean \code{mu} and standard deviations of the first and second components being \eqn{s_1}
 and \eqn{s_2} and correlation between them being \code{rho}.
 }
 \description{
-Computes the value of the probability density function (i.e. density) of the bivariate normal distribution
+Computes the value of the probability density function (i.e., density) of the bivariate normal distribution
 at the specified point \code{X}, with mean \code{mu} and standard deviations of the first and second components being \eqn{s_1}
 and \eqn{s_2} (denoted as \code{s1} and \code{s2} in the arguments of the function, respectively) 
 and correlation between them being \code{rho} (i.e., the covariance matrix is \eqn{\Sigma=S} where \eqn{S_{11}=s_1^2},

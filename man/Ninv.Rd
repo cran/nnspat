@@ -7,13 +7,17 @@
 Ninv(x, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) 
+or a data set of points in matrix or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, \code{x} is taken as the inter-point distance
+matrix, otherwise, \code{x} is taken as the data set 
+with rows representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
 Returns a \code{list} with two elements
@@ -21,10 +25,14 @@ Returns a \code{list} with two elements
  \item{R}{number of reflexive points}
 }
 \description{
-Returns the \code{Qvec} and \code{R} where \eqn{Qvec=(Q_0,Q_1,\ldots)} with
+Returns the \code{Qvec} and \code{R} 
+where \eqn{Qvec=(Q_0,Q_1,\ldots)} with
 \eqn{Q_j} is the number of points shared as a NN
-by \eqn{j} other points i.e. number of points that are NN of \eqn{i} points, for \eqn{i=0,1,2,\ldots}
-and \code{R} is the number of reflexive pairs where A and B are reflexive iff they are NN to each other.
+by \eqn{j} other points i.e., number of points 
+that are NN of \eqn{i} points, for \eqn{i=0,1,2,\ldots}
+and \code{R} is the number of reflexive pairs 
+where points A and B are reflexive 
+iff they are NN to each other.
 }
 \examples{
 #3D data points
@@ -59,8 +67,8 @@ Ninv(ipd)
 
 }
 \seealso{
-\code{\link{Qval}}, \code{\link{Qvec}}, \code{\link{sharedNN}}, \code{\link{Rval}} 
-and \code{\link{QRval}}
+\code{\link{Qval}}, \code{\link{Qvec}}, \code{\link{sharedNN}}, 
+\code{\link{Rval}}, and \code{\link{QRval}}
 }
 \author{
 Elvan Ceyhan

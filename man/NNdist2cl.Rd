@@ -2,49 +2,75 @@
 % Please edit documentation in R/NNCTFunctions.R
 \name{NNdist2cl}
 \alias{NNdist2cl}
-\title{Distances between subjects from class \eqn{i} and their NNs from class \eqn{j}}
+\title{Distances between subjects from class \eqn{i} 
+and their NNs from class \eqn{j}}
 \usage{
 NNdist2cl(x, i, j, lab, within.class.ind = FALSE, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) 
+or a data set of points in matrix or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{i, j}{class label of base class and NN classes, respectively.}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
-\item{within.class.ind}{A logical parameter (default=\code{FALSE}). If \code{TRUE}, index numbering of subjects 
-is within the class, from 1 to class size (i.e., \code{1:n_i}), according to their order in the original data;
-otherwise, index numbering within class is just the indices in the original data.}
+\item{within.class.ind}{A logical parameter (default=\code{FALSE}). 
+If \code{TRUE}, index numbering of subjects 
+is within the class, from 1 to class size (i.e., \code{1:n_i}), 
+according to their order in the original data;
+otherwise, index numbering within class is just 
+the indices in the original data.}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, \code{x} is taken as the inter-point distance matrix, 
+otherwise, \code{x} is taken as the data set 
+with rows representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, 
+such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
 Returns a \code{list} with three elements
- \item{nndist}{\eqn{n_i \times 3} matrix where \eqn{n_i} is the size of class \eqn{i} and first column is the subject index in 
- class \eqn{i}, second column is the subject index in NN class \eqn{j}, and third column contains the corresponding
+ \item{nndist}{\eqn{n_i \times 3} matrix 
+ where \eqn{n_i} is the size of class \eqn{i} and 
+ first column is the subject index in 
+ class \eqn{i}, second column is the subject index in NN class \eqn{j}, 
+ and third column contains the corresponding
  distances of each class \eqn{i} subject to its NN among class \eqn{j} subjects.}
  \item{base.class}{label of base class} 
  \item{nn.class}{label of NN class}
 }
 \description{
-Returns the distances between subjects from class \eqn{i} and their nearest neighbors (NNs) from class \eqn{j}. 
-The output is a \code{list} with first entry (\code{nndist}) being an \eqn{n_i \times 3} matrix where \eqn{n_i} is the size of class \eqn{i}
-and first column is the subject index in class \eqn{i}, second column is the subject index in NN class \eqn{j},  
-and third column contains the corresponding distances of each class \eqn{i} subject to its NN among class \eqn{j}
-subjects. Class \eqn{i} is labeled as base class and class \eqn{j} is labeled as NN class.
+Returns the distances between subjects from class \eqn{i} 
+and their nearest neighbors (NNs) from class \eqn{j}. 
+The output is a \code{list} with first entry (\code{nndist}) 
+being an \eqn{n_i \times 3} matrix 
+where \eqn{n_i} is the size of class \eqn{i}
+and first column is the subject index in class \eqn{i}, 
+second column is the subject index in NN class \eqn{j},  
+and third column contains the corresponding distances 
+of each class \eqn{i} subject to its NN among class \eqn{j}
+subjects. Class \eqn{i} is labeled as base class 
+and class \eqn{j} is labeled as NN class.
 
-The argument \code{within.class.ind} is a logical argument (default=\code{FALSE}) to determine the indexing of 
-the class \eqn{i} subjects. If \code{TRUE}, index numbering of subjects is within the class, 
-from 1 to class size (i.e., \code{1:n_i}), according to their order in the original data;
-otherwise, index numbering within class is just the indices in the original data.
+The argument \code{within.class.ind} is a logical argument 
+(default=\code{FALSE}) to determine the indexing of 
+the class \eqn{i} subjects. 
+If \code{TRUE}, 
+index numbering of subjects is within the class, 
+from 1 to class size (i.e., \code{1:n_i}), 
+according to their order in the original data;
+otherwise, index numbering within class is just 
+the indices in the original data.
 
-The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) to determine the structure of the argument \code{x}.
-If \code{TRUE}, \code{x} is taken to be the inter-point distance (IPD) matrix, and if \code{FALSE}, \code{x} is taken to be the data set
+The argument \code{is.ipd} is a logical argument 
+(default=\code{TRUE}) to determine the structure of the argument \code{x}.
+If \code{TRUE}, \code{x} is taken to be 
+the inter-point distance (IPD) matrix, 
+and if \code{FALSE}, \code{x} is taken to be the data set
 with rows representing the data points.
 }
 \examples{
@@ -78,7 +104,8 @@ NNdist2cl(X,1,2,clab,is.ipd = FALSE)
 
 }
 \seealso{
-\code{\link{kthNNdist}}, \code{\link{kNNdist}}, and \code{\link{NNdist2cl}}
+\code{\link{kthNNdist}}, \code{\link{kNNdist}}, 
+and \code{\link{NNdist2cl}}
 }
 \author{
 Elvan Ceyhan

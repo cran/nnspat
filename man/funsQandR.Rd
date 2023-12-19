@@ -6,7 +6,8 @@
 \alias{Qvec}
 \alias{sharedNN}
 \alias{Rval}
-\title{Functions for the Number of Shared NNs, Shared NN vector and the number of reflexive NNs}
+\title{Functions for the number of shared NNs, 
+shared NN vector, and the number of reflexive NNs}
 \usage{
 Qval(W)
 
@@ -20,33 +21,48 @@ Rval(W)
 \item{W}{The incidence matrix, \eqn{W}, for the NN digraph}
 }
 \value{
-\code{Qval} returns the \eqn{Q} value
-\code{Qvec} returns a \code{list} with two elements
+The function \code{Qval} returns the \eqn{Q} value
+
+The function \code{Qvec} returns a \code{list} with two elements
  \item{q}{the \eqn{Q} value, the number of shared NNs}
  \item{qvec}{the \code{vector} of \eqn{Q_j} values} 
-\code{sharedNN} returns a \code{matrix} with 2 rows, where first row is the \eqn{j} values and second row is
+ 
+The function \code{sharedNN} returns a \code{matrix} with 2 rows, 
+where first row is the \eqn{j} values and second row is
 the corresponding vector of \eqn{Q_j} values
-\code{Rval}{the \eqn{R} value, the number of reflexive NNs}
+
+The function \code{Rval} returns the \eqn{R} value, 
+the number of reflexive NNs.
 
 See the description above for the details of these quantities.
 }
 \description{
 Four functions: \code{Qval}, \code{Qvec}, \code{sharedNN} and \code{Rval}.
 
-\code{Qval} returns the \eqn{Q} value, the number of points with shared nearest neighbors (NNs), which occurs when two or 
+\code{Qval} returns the \eqn{Q} value, the number of points with 
+shared nearest neighbors (NNs), which occurs when two or 
 more points share a NN, for data in any dimension. 
 
-\code{Qvec} returns the Q-value and also yields the Qv vector \eqn{Qv=(Q_0,Q_1,\ldots)} as well for data in any 
-dimension, where \eqn{Q_j} is the number of points shared as a NN by \eqn{j} other points. 
+\code{Qvec} returns the Q-value and also yields 
+the \eqn{Qv} vector \eqn{Qv=(Q_0,Q_1,\ldots)} as well 
+for data in any dimension, 
+where \eqn{Q_j} is the number of points shared as 
+a NN by \eqn{j} other points. 
 
-\code{sharedNN} returns the \code{vector} of number of points with shared NNs, \eqn{Q=(Q_0,Q_1,\ldots)} where \eqn{Q_i} is
-the number of points that are NN to \eqn{i} points, and if a point is a NN of \eqn{i} points, then there are \eqn{i(i-1)} 
-points that share a NN. So \eqn{Q=\sum_{i>1} i(i-1)Q_i}.
+\code{sharedNN} returns the \code{vector} of number of points 
+with shared NNs, \eqn{Q=(Q_0,Q_1,\ldots)} 
+where \eqn{Q_i} is the number of points that are NN to \eqn{i} points, 
+and if a point is a NN of \eqn{i} points, 
+then there are \eqn{i(i-1)} points that share a NN. 
+So, \eqn{Q=\sum_{i>1} i(i-1)Q_i}.
 
-\code{Rval} returns the number of reflexive NNs, R (i.e., twice the number of reflexive NN pairs).
+\code{Rval} returns the number of reflexive NNs, 
+\eqn{R} (i.e., twice the number of reflexive NN pairs).
 
-These quantities are used, e.g., in computing the variances and covariances of the entries of the
-nearest neighbor contingency tables used for Dixon's tests and other NNCT tests. 
+These quantities are used, e.g., in computing the variances 
+and covariances of the entries of the
+nearest neighbor contingency tables used for Dixon's tests 
+and other NNCT tests. 
 The input must be the incidence matrix, \eqn{W}, of the NN digraph.
 }
 \examples{
@@ -159,7 +175,8 @@ Rval(W)
 
 }
 \seealso{
-\code{\link{Tval}}, \code{\link{QRval}}, \code{\link{sharedNNmc}} and \code{\link{Ninv}}
+\code{\link{Tval}}, \code{\link{QRval}}, \code{\link{sharedNNmc}},
+and \code{\link{Ninv}}
 }
 \author{
 Elvan Ceyhan

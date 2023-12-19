@@ -63,7 +63,7 @@ Both functions are objects of class \code{"htest"} but with different arguments 
 Each one performs the hypothesis test of equality of the expected value of the off-diagonal 
 cell counts (i.e., entries) under RL or CSR in the NNCT for \eqn{k=2} classes.
 That is, each performs Dixon's NN symmetry test which is appropriate 
-(i.e. have the appropriate asymptotic sampling distribution)
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data.
 (See \insertCite{ceyhan:SWJ-spat-sym2014;textual}{nnspat} for more detail).
 

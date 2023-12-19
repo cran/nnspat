@@ -7,33 +7,54 @@
 Wmat(x, ties = FALSE, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) 
+or a data set of points in matrix or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
-\item{ties}{A logical parameter (default=\code{FALSE}) to take ties into account in computing the \eqn{W} matrix,
-so if it is \code{TRUE}, \eqn{w_{ij}=1/m} if point \eqn{j} is a NN of point \eqn{i} and there are \eqn{m} tied NNs and 0 otherwise
-and if \code{FALSE}, \eqn{w_{ij}=1} if point \eqn{j} is a NN of point \eqn{i} and 0 otherwise.}
+\item{ties}{A logical parameter (default=\code{FALSE}) 
+to take ties into account in computing the \eqn{W} matrix,
+so, if it is \code{TRUE}, \eqn{w_{ij}=1/m} if point \eqn{j} is 
+a NN of point \eqn{i} and there are \eqn{m} tied NNs and 0 otherwise
+and if \code{FALSE}, \eqn{w_{ij}=1} 
+if point \eqn{j} is a NN of point \eqn{i} and 0 otherwise.}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, \code{x} is taken as the inter-point distance matrix, 
+otherwise, \code{x} is taken as the data set 
+with rows representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
-The incidence matrix \eqn{W=(w_ij)} where \eqn{w_{ij}=I(} point eqn{j} is a NN of point \eqn{i))},
-i.e. \eqn{w_{ij}=1} if point \eqn{j} is a NN of point \eqn{i} and 0 otherwise.
+The incidence matrix \eqn{W=(w_ij)} 
+where \eqn{w_{ij}=I(} point \eqn{j} is a NN of point \eqn{i))},
+i.e., \eqn{w_{ij}=1} if point \eqn{j} is a NN of 
+point \eqn{i} and 0 otherwise.
 }
 \description{
-Returns the \eqn{W=(w_ij)} matrix which is used to compute \eqn{Q}, \eqn{R} and \eqn{T} values in the NN structure.
-\eqn{w_{ij}=I(} point eqn{j} is a NN of point \eqn{i))} i.e. \eqn{w_{ij}=1} if point \eqn{j} is a NN of point \eqn{i} and 0 otherwise.
+Returns the \eqn{W=(w_ij)} matrix which is used to compute 
+\eqn{Q}, \eqn{R} and \eqn{T} values in the NN structure.
+\eqn{w_{ij}=I(} point \eqn{j} is a NN of point \eqn{i))} 
+i.e., \eqn{w_{ij}=1} if point \eqn{j} is a NN of
+point \eqn{i} and 0 otherwise.
 
-The argument \code{ties} is a logical argument (default=\code{FALSE}) to take ties into account or not. If \code{TRUE} the function
-takes ties into account by making \eqn{w_{ij}=1/m} if point \eqn{j} is a NN of point \eqn{i}
-and there are \eqn{m} tied NNs and 0 otherwise. If \code{FALSE}, \eqn{w_{ij}=1} if point \eqn{j} is a NN of point \eqn{i} and 0 otherwise.
-The matrix \eqn{W} is equivalent to \eqn{A=(a_{ij})} matrix with \eqn{k=1}, i.e., \code{Wmat(X)=aij.mat(X,k=1)}.
+The argument \code{ties} is a logical argument (default=\code{FALSE}) 
+to take ties into account or not. If \code{TRUE} the function
+takes ties into account by making \eqn{w_{ij}=1/m} 
+if point \eqn{j} is a NN of point \eqn{i}
+and there are \eqn{m} tied NNs and 0 otherwise. 
+If \code{FALSE}, \eqn{w_{ij}=1} if point \eqn{j} is 
+a NN of point \eqn{i} and 0 otherwise.
+The matrix \eqn{W} is equivalent to 
+\eqn{A=(a_{ij})} matrix with \eqn{k=1}, 
+i.e., \code{Wmat(X)=aij.mat(X,k=1)}.
 
-The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) to determine the structure of the argument \code{x}.
-If \code{TRUE}, \code{x} is taken to be the inter-point distance (IPD) matrix, and if \code{FALSE}, \code{x} is taken to be the data set
+The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) 
+to determine the structure of the argument \code{x}.
+If \code{TRUE}, \code{x} is taken to be 
+the inter-point distance (IPD) matrix, 
+and if \code{FALSE}, \code{x} is taken to be the data set
 with rows representing the data points.
 }
 \examples{
@@ -68,7 +89,8 @@ Wmat(Y,ties=TRUE,is.ipd = FALSE)
 
 }
 \seealso{
-\code{\link{aij.mat}}, \code{\link{aij.nonzero}}, and \code{\link{aij.theta}}
+\code{\link{aij.mat}}, \code{\link{aij.nonzero}}, 
+and \code{\link{aij.theta}}
 }
 \author{
 Elvan Ceyhan

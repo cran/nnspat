@@ -38,7 +38,7 @@ used in \code{Zdir.nnct.ss} only}
 }
 \value{
 A \code{list} with the elements
-\item{statistic}{The \eqn{Z} test statistic for the directional (i.e. one-sided) test of segregation based on
+\item{statistic}{The \eqn{Z} test statistic for the directional (i.e., one-sided) test of segregation based on
 the NNCT}
 \item{p.value}{The \eqn{p}-value for the hypothesis test for the corresponding alternative}
 \item{conf.int}{Confidence interval for the difference in phat values in the NNCT
@@ -58,13 +58,13 @@ Both functions are objects of class \code{"htest"} but with different arguments 
 Each one performs hypothesis tests of independence in the \eqn{2 \times 2} NNCT which implies \eqn{Z_P=0}
 or equivalently \eqn{N_{11}/n_1=N_{21}/n_2}.
 \eqn{Z_P=(N_{11}/n_1-N_{21}/n_2)\sqrt{n_1 n_2 n/(C_1 C_2)}} 
-where \eqn{N_{ij}} is the cell count in entry \eqn{i,j}, \eqn{n_i} is the sum of row \eqn{i} (i.e. size of class \eqn{i}),
+where \eqn{N_{ij}} is the cell count in entry \eqn{i,j}, \eqn{n_i} is the sum of row \eqn{i} (i.e., size of class \eqn{i}),
 \eqn{c_j} is the sum of column \eqn{j} in the \eqn{2 \times 2} NNCT;
 \eqn{N_{11}/n_1} and \eqn{N_{21}/n_2} are also referred to as the phat estimates in row-wise binomial framework
 for \eqn{2 \times 2} NNCT (see \insertCite{ceyhan:jnps-NNCT-2010;textual}{nnspat}).
 
-That is, each performs directional (i.e. one-sided) tests based on the \eqn{2 \times 2} NNCT and is appropriate
-(i.e. have the appropriate asymptotic sampling distribution)
+That is, each performs directional (i.e., one-sided) tests based on the \eqn{2 \times 2} NNCT and is appropriate
+(i.e., have the appropriate asymptotic sampling distribution)
 when that data is obtained by sparse sampling.
 (See \insertCite{ceyhan:jnps-NNCT-2010;textual}{nnspat} for more detail).
 
@@ -72,7 +72,7 @@ Each test is based on the normal approximation of \eqn{Z_P} which is the directi
 tests of independence for the contingency tables \insertCite{bickel:1977}{nnspat}.
 
 Each function yields the test statistic, \eqn{p}-value for the
-corresponding alternative, the confidence interval, sample estimate (i.e. observed value) and
+corresponding alternative, the confidence interval, sample estimate (i.e., observed value) and
 null (i.e., expected) value for the difference in the phat values (which is 0 for this test) in an NNCT, 
 and method and name of the data set used.
 

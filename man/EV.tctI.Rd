@@ -13,12 +13,14 @@ EV.tctI(ct)
 A \code{matrix} of the expected values of Type I cell-specific tests.
 }
 \description{
-Returns a \code{matrix} of same dimension as, \code{ct}, whose entries are the expected values
+Returns a \code{matrix} of same dimension as, \code{ct}, 
+whose entries are the expected values
 of the Type I cell-specific test statistics, \eqn{T^I_{ij}}. 
 The row and column names are inherited from \code{ct}. 
 These expected values are valid under RL or CSR.
 
-See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}) and the references therein.
+See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}) 
+and the references therein.
 }
 \examples{
 n<-20  #or try sample(1:20,1)

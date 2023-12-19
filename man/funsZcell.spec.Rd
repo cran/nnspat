@@ -26,7 +26,7 @@ cell.spec(
 \arguments{
 \item{ct}{A nearest neighbor contingency table, used in \code{Zcell.spec.ct} only}
 
-\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct} ;
+\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct};
 used in \code{Zcell.spec.ct} only.}
 
 \item{type}{The type of the cell-specific test with no default.
@@ -49,7 +49,7 @@ A \code{list} with the elements
 \item{statistic}{The \code{matrix} of cell-specific test statistics}
 \item{stat.names}{Name of the test statistics}
 \item{p.value}{The \code{matrix} of \eqn{p}-values for the hypothesis test for the corresponding alternative}
-\item{LCL,UCL}{Matrix of Lower and Upper Confidence Levels for the \eqn{N_{ij}} or \eqn{T_{ij}} values at the given confidence
+\item{LCL,UCL}{Matrix of lower and upper confidence levels for the \eqn{N_{ij}} or \eqn{T_{ij}} values at the given confidence
 level \code{conf.level} and depends on the type of \code{alternative}.}
 \item{conf.int}{The confidence interval for the estimates, it is \code{NULL} here, since we provide the \code{UCL} and \code{LCL}
 in \code{matrix} form.}
@@ -79,8 +79,8 @@ The \code{type="dixon"} or \code{"nnct"} refers to Dixon's cell-specific test of
 \code{type="I"}-\code{"IV"} refers to types I-IV cell-specific tests, respectively.
 
 Each function yields a contingency table of the test statistics, \eqn{p}-values for the corresponding 
-alternative, expected values (i.e. null value(s)), lower and upper confidence levels and sample estimates (i.e. observed values)
-for the \eqn{N_{ij}} or \eqn{T_{ij}} values and also names of the test statistics, estimates, null values and the method and
+alternative, expected values (i.e., null value(s)), lower and upper confidence levels and sample estimates (i.e., observed values)
+for the \eqn{N_{ij}} or \eqn{T_{ij}} values and also names of the test statistics, estimates, null values, the description of the test, and
 the data set used.
 
 The null hypothesis for each entry \eqn{i,j} is that the corresponding value \eqn{N_{ij}} or \eqn{T_{ij}} is equal to the 

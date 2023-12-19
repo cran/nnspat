@@ -11,17 +11,24 @@ var.nnct(ct, Q, R)
 
 \item{Q}{The number of shared NNs}
 
-\item{R}{The number of reflexive NNs (i.e., twice the number of reflexive NN pairs)}
+\item{R}{The number of reflexive NNs (i.e., 
+twice the number of reflexive NN pairs)}
 }
 \value{
-A \code{matrix} of same dimension as, \code{ct}, whose entries are the variances of the cell counts 
-in the NNCT with class sizes given as the row sums of \code{ct}. The row and column names are inherited from \code{ct}.
+A \code{matrix} of same dimension as, \code{ct}, 
+whose entries are the variances of the cell counts 
+in the NNCT with class sizes given as the row sums of \code{ct}. 
+The row and column names are inherited from \code{ct}.
 }
 \description{
-Returns the variances of cell counts \eqn{N_{ij}} for \eqn{i,j=1,\ldots,k} in the NNCT, \code{ct} in matrix form which
-is of the same dimension as \code{ct}. These variances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.
+Returns the variances of cell counts \eqn{N_{ij}} 
+for \eqn{i,j=1,\ldots,k} in the NNCT, \code{ct} in matrix form which
+is of the same dimension as \code{ct}. 
+These variances are valid under RL or 
+conditional on \eqn{Q} and \eqn{R} under CSR.
 
-See also (\insertCite{dixon:1994,dixon:NNCTEco2002,ceyhan:eest-2010,ceyhan:jkss-posthoc-2017;textual}{nnspat}).
+See also 
+(\insertCite{dixon:1994,dixon:NNCTEco2002,ceyhan:eest-2010,ceyhan:jkss-posthoc-2017;textual}{nnspat}).
 }
 \examples{
 n<-20  #or try sample(1:20,1)
@@ -59,7 +66,8 @@ var.nnct(ct,Qv,Rv)
 \insertAllCited{}
 }
 \seealso{
-\code{\link{var.tct}}, \code{\link{var.nnsym}} and \code{\link{cov.nnct}}
+\code{\link{var.tct}}, \code{\link{var.nnsym}},
+and \code{\link{cov.nnct}}
 }
 \author{
 Elvan Ceyhan

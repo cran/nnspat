@@ -10,11 +10,11 @@ EV.Nii(ct)
 \item{ct}{The NNCT or SCCT}
 }
 \value{
-A \code{vector} of length \eqn{k} whose entries are the expected values of the self entries (i.e. first column) in a
+A \code{vector} of length \eqn{k} whose entries are the expected values of the self entries (i.e., first column) in a
 species correspondence contingency table (SCCT) or of the diagonal entries in an NNCT.
 }
 \description{
-Returns a \code{vector} of length \eqn{k} of expected values of the self entries (i.e. first column) in a
+Returns a \code{vector} of length \eqn{k} of expected values of the self entries (i.e., first column) in a
 species correspondence contingency table (SCCT) or the expected values of the diagonal entries \eqn{N_{ii}} in an NNCT.
 These expected values are valid under RL or CSR.
 

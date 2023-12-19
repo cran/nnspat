@@ -7,26 +7,39 @@
 ipd.mat(x, y = NULL, ...)
 }
 \arguments{
-\item{x}{A set of points in matrix or data frame form where points correspond to the rows.}
+\item{x}{A set of points in matrix or data frame form 
+where points correspond to the rows.}
 
-\item{y}{A set of points in matrix or data frame form where points correspond to the rows (default=\code{NULL}).}
+\item{y}{A set of points in matrix or data frame form 
+where points correspond to the rows (default=\code{NULL}).}
 
 \item{\dots}{Additional parameters to be passed on the \code{dist} function.}
 }
 \value{
-A distance matrix whose i,j-th entry is the distance between row \eqn{i} of \code{x} and row \eqn{j} of \code{y} if \code{y} is provided,
-otherwise i,j-th entry is the distance between rows \eqn{i} and \eqn{j} of \code{x}.
+A distance matrix whose  \eqn{i,j}-th entry is the distance 
+between row \eqn{i} of \code{x} and row \eqn{j} of \code{y} 
+if \code{y} is provided,
+otherwise  \eqn{i,j}-th entry is the distance between 
+rows \eqn{i} and \eqn{j} of \code{x}.
 }
 \description{
-This function computes and returns the distance matrix computed by using the specified distance measure to
-compute the distances between the rows of the set of points \code{x} and \code{y} using the 
-\code{\link[stats]{dist}} function in the \code{stats} package of the standard R distribution.
-If \code{y} is provided (default=\code{NULL}) it yields a matrix of distances between the rows of \code{x} and 
-rows of \code{y}. Otherwise, it provides a square matrix with i,j-th entry being the distance between row 
+This function computes and returns the distance matrix computed 
+by using the specified distance measure to
+compute the distances between the rows of 
+the set of points \code{x} and \code{y} using the 
+\code{\link[stats]{dist}} function 
+in the \code{stats} package of the standard R distribution.
+If \code{y} is provided (default=\code{NULL}) it yields 
+a matrix of distances between the rows of \code{x} and 
+rows of \code{y}. Otherwise, it provides a square matrix 
+with  \eqn{i,j}-th entry being the distance between row 
 \eqn{i} and row \eqn{j} of \code{x}.
-This function is different from the \code{\link[stats]{dist}} function in the \code{stats} package.
-\code{dist} returns the distance matrix in a lower triangular form, and \code{ipd.mat} returns in a full matrix.
-\dots are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.
+This function is different from the \code{\link[stats]{dist}} function 
+in the \code{stats} package.
+\code{dist} returns the distance matrix in a lower triangular form, 
+and \code{ipd.mat} returns in a full matrix.
+\dots are for further arguments, such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.
 }
 \examples{
 #3D data points
@@ -55,7 +68,8 @@ ipd.mat(X[1,],Y[3,])
 
 }
 \seealso{
-\code{\link[stats]{dist}}, \code{\link{ipd.mat.euc}}, \code{\link{dist.std.data}}
+\code{\link[stats]{dist}}, \code{\link{ipd.mat.euc}}, 
+and \code{\link{dist.std.data}}
 }
 \author{
 Elvan Ceyhan

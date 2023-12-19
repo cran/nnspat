@@ -2,42 +2,65 @@
 % Please edit documentation in R/NNCTFunctions.R
 \name{nnct.sub}
 \alias{nnct.sub}
-\title{Nearest Neighbor Contingency Table (NNCT) with (only) base points restricted to a subsample}
+\title{Nearest Neighbor Contingency Table (NNCT) with (only) 
+base points restricted to a subsample}
 \usage{
 nnct.sub(ss, x, lab, ties = FALSE, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{ss}{indices of subjects (i.e., row indices in the data set) chosen to be the base points}
+\item{ss}{indices of subjects (i.e., row indices in the data set) 
+chosen to be the base points}
 
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE})
+or a data set of points in matrix 
+or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
-\item{ties}{A logical argument (default=\code{FALSE}) to take ties into account or not. If \code{TRUE} a NN 
-contributes \eqn{1/m} to the NN count if it is one of the \eqn{m} tied NNs of a subject.}
+\item{ties}{A logical argument (default=\code{FALSE}) 
+to take ties into account or not. 
+If \code{TRUE} a NN 
+contributes \eqn{1/m} to the NN count 
+if it is one of the \eqn{m} tied NNs of a subject.}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, 
+\code{x} is taken as the inter-point distance matrix, 
+otherwise, \code{x} is taken as the data set with rows 
+representing the data points.}
 
-\item{...}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{...}{are for further arguments, 
+such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
-Returns the \eqn{k \times k} NNCT where \eqn{k} is the number of classes in the data set with (only) base points
+Returns the \eqn{k \times k} NNCT 
+where \eqn{k} is the number of classes in the data set with (only) base points
 restricted to a subsample \code{ss}.
 }
 \description{
-Returns the \eqn{k \times k} NNCT with (only) base points are restricted to be in the subset of indices \code{ss} using
-the IPD matrix or data set \code{x} where \eqn{k} is the number of classes in the data set. That is, the base points
-are the points with indices in \code{ss} but for the NNs the function checks all the points in the data set 
+Returns the \eqn{k \times k} NNCT with (only) base points are restricted 
+to be in the subset of indices \code{ss} using
+the IPD matrix or data set \code{x} where \eqn{k} is 
+the number of classes in the data set. 
+That is, the base points
+are the points with indices in \code{ss} 
+but for the NNs the function checks all the points in the data set 
 (including the points in \code{ss}). 
-Row and columns of the NNCT are labeled with the corresponding class labels.
+Row and columns of the NNCT are labeled with 
+the corresponding class labels.
 
-The argument \code{ties} is a logical argument (default=\code{FALSE}) to take ties into account or not. If \code{TRUE} a NN 
-contributes \eqn{1/m} to the NN count if it is one of the \eqn{m} tied NNs of a subject.
+The argument \code{ties} is a logical argument 
+(default=\code{FALSE}) to take ties into account or not. 
+If \code{TRUE} a NN contributes \eqn{1/m} to the NN count 
+if it is one of the \eqn{m} tied NNs of a subject.
 
-The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) to determine the structure of the argument \code{x}.
-If \code{TRUE}, \code{x} is taken to be the inter-point distance (IPD) matrix, and if \code{FALSE}, \code{x} is taken to be the data set
+The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) 
+to determine the structure of the argument \code{x}.
+If \code{TRUE}, \code{x} is taken to be 
+the inter-point distance (IPD) matrix, 
+and if \code{FALSE}, \code{x} is taken to be the data set
 with rows representing the data points.
 }
 \examples{

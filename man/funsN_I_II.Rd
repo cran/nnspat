@@ -23,7 +23,7 @@ See the description above for further detail.
 Two functions: \code{nnct.cr1} and \code{nnct.cr1}.
 
 Each function yields matrices which are used in obtaining the correction term to be added to 
-the usual Chi-Square test of contingency tables (i.e. Pielou's test) applied
+the usual Chi-Square test of contingency tables (i.e., Pielou's test) applied
 on NNCTs to obtain types I and II overall tests.
 The output contingency tables are to be row-wise vectorized to obtain \eqn{N_I} and \eqn{N_{II}} vectors. 
 See Sections 3.1 and 3.2 in 

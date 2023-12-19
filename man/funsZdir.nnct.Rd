@@ -28,7 +28,7 @@ Zdir.nnct(
 
 \item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT}
 
-\item{type}{The type of the directional (i.e. one-sided) test with default=\code{"II"}.
+\item{type}{The type of the directional (i.e., one-sided) test with default=\code{"II"}.
 Takes on values \code{"I"} and \code{"II"} for types I and II directional tests (see the description above).}
 
 \item{alternative}{Type of the alternative hypothesis in the test, one of \code{"two.sided"}, \code{"less"} or \code{"greater"}.}
@@ -46,7 +46,7 @@ used in \code{Zdir.nnct} only}
 }
 \value{
 A \code{list} with the elements
-\item{statistic}{The \eqn{Z} test statistic for the directional (i.e. one-sided) test of segregation based on
+\item{statistic}{The \eqn{Z} test statistic for the directional (i.e., one-sided) test of segregation based on
 the NNCT}
 \item{p.value}{The \eqn{p}-value for the hypothesis test for the corresponding alternative}
 \item{conf.int}{Confidence interval for the difference in phat values in an NNCT
@@ -66,8 +66,8 @@ Both functions are objects of class \code{"htest"} but with different arguments 
 Each one performs hypothesis tests of equality of the expected value of the the difference between the
 phat estimates in a \eqn{2 \times 2} NNCT to the one under RL or CSR (which is \eqn{-1/(n-1)}) where
 phat estimates are \eqn{N_{11}/n_1} and \eqn{N_{21}/n_2}.
-That is, each performs directional (i.e. one-sided) tests based on the \eqn{2 \times 2} NNCT 
-(i.e. have the appropriate asymptotic sampling distribution)
+That is, each performs directional (i.e., one-sided) tests based on the \eqn{2 \times 2} NNCT 
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data.
 (See \insertCite{ceyhan:jnps-NNCT-2010;textual}{nnspat} for more detail).
 
@@ -80,7 +80,7 @@ Each test is based on the normal approximation of the \eqn{Z_I} and \eqn{Z_{II}}
 are due to \insertCite{ceyhan:jnps-NNCT-2010}{nnspat}.
 
 Each function yields the test statistic, \eqn{p}-value for the
-corresponding alternative, the confidence interval, sample estimate (i.e. observed value) and null
+corresponding alternative, the confidence interval, sample estimate (i.e., observed value) and null
 (i.e., expected) value for the difference in phat values which is \eqn{-1/(n-1)} for this function 
 and method and name of the data set used.
 

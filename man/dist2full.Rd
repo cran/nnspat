@@ -7,16 +7,20 @@
 dist2full(dis)
 }
 \arguments{
-\item{dis}{A lower triangular matrix, resulting from the \code{\link[stats]{dist}} 
+\item{dis}{A lower triangular matrix, 
+resulting from the \code{\link[stats]{dist}} 
 function in the \code{stats} package}
 }
 \value{
 A square (symmetric) distance matrix with zeroes in the diagonal.
 }
 \description{
-Converts a lower triangular distance matrix to a full distance matrix with zeroes in the diagonal.
-The input is usually the result of the \code{\link[stats]{dist}} function in the \code{stats} package.
-This function is adapted from Everitt's book (\insertCite{everitt:2004;textual}{nnspat})
+Converts a lower triangular distance matrix to a full distance matrix
+with zeroes in the diagonal.
+The input is usually the result of the \code{\link[stats]{dist}} function 
+in the \code{stats} package.
+This function is adapted from Everitt's book 
+(\insertCite{everitt:2004;textual}{nnspat})
 }
 \examples{
 #3D data points

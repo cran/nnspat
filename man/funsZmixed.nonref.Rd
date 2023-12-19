@@ -65,16 +65,16 @@ Two functions: \code{Zmixed.nonref.ct} and \code{Zmixed.nonref}.
 
 Both functions are objects of class \code{"htest"} but with different arguments (see the parameter list below).
 Each one performs hypothesis tests of mixed non-reflexivity in the NN structure using the
-number of mixed-non-reflexive NN pairs (i.e. the second diagonal entry, \eqn{(2,2)}) in the RCT for \eqn{k \ge 2} classes.
+number of mixed-non-reflexive NN pairs (i.e., the second diagonal entry, \eqn{(2,2)}) in the RCT for \eqn{k \ge 2} classes.
 That is, each test performs a test of mixed non-reflexivity corresponding to entry \eqn{(2,2)} in the RCT)
-which is appropriate (i.e. have the appropriate asymptotic sampling distribution) for completely mapped data.
+which is appropriate (i.e., have the appropriate asymptotic sampling distribution) for completely mapped data.
 (See \insertCite{ceyhan:NNreflexivity2017;textual}{nnspat} for more detail).
 
 The mixed non-reflexivity test is based on the normal approximation of the diagonal entry \eqn{(2,2)}
 in the RCT and are due to \insertCite{ceyhan:NNreflexivity2017;textual}{nnspat}.
 
 Each function yields the test statistic, \eqn{p}-value for the
-corresponding alternative, the confidence interval, sample estimate (i.e. observed value) and null (i.e., expected) value for the
+corresponding alternative, the confidence interval, sample estimate (i.e., observed value) and null (i.e., expected) value for the
 mixed non-reflexivity value (i.e., diagonal entry \eqn{(2,2)} value, respectively) in the RCT, 
 and method and name of the data set used.
 

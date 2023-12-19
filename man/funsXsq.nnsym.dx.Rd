@@ -47,7 +47,7 @@ Both functions are objects of class \code{"Chisqtest"} but with different argume
 Each one performs the hypothesis test of equality of the expected value of the off-diagonal 
 cell counts (i.e., entries) under RL or CSR in the NNCT for \eqn{k \ge 2} classes.
 That is, each performs Dixon's overall NN symmetry test.
-The test is appropriate (i.e. have the appropriate asymptotic sampling distribution)
+The test is appropriate (i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data.
 (See \insertCite{ceyhan:SWJ-spat-sym2014;textual}{nnspat} for more detail).
 
@@ -56,10 +56,10 @@ and is an extension of Dixon's NN symmetry test, which is extended by
 \insertCite{ceyhan:SWJ-spat-sym2014;textual}{nnspat}.
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{k(k-1)/2}, description of the 
-alternative with the corresponding null values (i.e. expected values) of differences of the off-diagonal entries,(which is
-0 for this function) and also the sample estimates (i.e. observed values) of absolute differences of the off-diagonal entries of 
+alternative with the corresponding null values (i.e., expected values) of differences of the off-diagonal entries,(which is
+0 for this function) and also the sample estimates (i.e., observed values) of absolute differences of the off-diagonal entries of 
 NNCT (in the upper-triangular form).
-The functions also provide names of the test statistics, the method and the data set used.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that all \eqn{E(N_{ij})=E(N_{ji})} entries for all \eqn{i \ne j} (i.e., symmetry in the 
 mixed NN structure).

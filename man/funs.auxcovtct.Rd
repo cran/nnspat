@@ -7,7 +7,8 @@
 \alias{covNijCk}
 \alias{cov.2cols}
 \alias{covCiCj}
-\title{Auxiliary Functions for Computing Covariances Between Cell Counts in the TCT}
+\title{Auxiliary Functions for Computing Covariances 
+Between Cell Counts in the TCT}
 \usage{
 cov.2cells(i, j, k, l, ct, covN)
 
@@ -20,37 +21,57 @@ cov.2cols(i, j, ct, covN)
 covCiCj(i, j, ct, covN)
 }
 \arguments{
-\item{i, j, k, l}{Indices of the cell counts or column sums whose covariance is to be computed. All four are
-needed for \code{cov.2cells} referring to cells \eqn{(i,j)} and \eqn{(k,l)}; only three indices \eqn{i,j,k} are needed for
-\code{cov.cell.col} and \code{covNijCk} referring to cell \eqn{(i,j)} and column \eqn{k};
-only two indices \eqn{i,j} are needed for \code{cov2cols} and \code{covCiCj} referring to columns \eqn{i} and \eqn{j}.}
+\item{i, j, k, l}{Indices of the cell counts or 
+column sums whose covariance is to be computed. 
+All four are needed for \code{cov.2cells} 
+referring to cells \eqn{(i,j)} and \eqn{(k,l)}; 
+only three indices \eqn{i,j,k} are needed for
+\code{cov.cell.col} and \code{covNijCk} 
+referring to cell \eqn{(i,j)} and column \eqn{k};
+only two indices \eqn{i,j} are needed for \code{cov2cols} 
+and \code{covCiCj} referring to columns \eqn{i} and \eqn{j}.}
 
 \item{ct}{A nearest neighbor contingency table}
 
-\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized cell counts of NNCT, \code{ct}.}
+\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of 
+row-wise vectorized cell counts of NNCT, \code{ct}.}
 }
 \value{
-\code{cov.2cells} returns the covariance between two cell counts \eqn{N_{ij}} and \eqn{N_{kl}} in an NNCT,
-\code{cov.cell.col} and \code{covNijCk} return the covariance between cell count \eqn{N_{ij}}
+\code{cov.2cells} returns the covariance 
+between two cell counts \eqn{N_{ij}} and \eqn{N_{kl}} in an NNCT,
+\code{cov.cell.col} and \code{covNijCk} 
+return the covariance between cell count \eqn{N_{ij}}
 and sum of column \eqn{k}, \eqn{C_k},
-\code{cov2cols} and \code{covCiCj} return the covariance between sums of two columns, 
+\code{cov2cols} and \code{covCiCj} 
+return the covariance between sums of two columns, 
 \eqn{C_i} and \eqn{C_j}.
 }
 \description{
 Five functions: \code{cov.2cells}, \code{cov.cell.col}, \code{covNijCk}, \code{cov2cols}
 and \code{covCiCj}
 
-These are auxiliary functions for computing covariances between entries in the TCT for the types I-IV
-cell-specific tests. The covariances between \eqn{T_{ij}} values for \eqn{i,j=1,\ldots,k} in the TCT require covariances
-between two cells in the NNCT, between a cell and column sum, and between two column sums in the NNCT.
-\code{cov.2cells} computes the covariance between two cell counts \eqn{N_{ij}} and \eqn{N_{kl}} in an NNCT,
-\code{cov.cell.col} and \code{covNijCk} are equivalent and they compute the covariance between cell count \eqn{N_{ij}}
+These are auxiliary functions for computing covariances 
+between entries in the TCT for the types I-IV
+cell-specific tests. 
+The covariances between \eqn{T_{ij}} values for \eqn{i,j=1,\ldots,k} 
+in the TCT require covariances
+between two cells in the NNCT, between a cell and column sum, 
+and between two column sums in the NNCT.
+\code{cov.2cells} computes the covariance 
+between two cell counts \eqn{N_{ij}} and \eqn{N_{kl}} in an NNCT,
+\code{cov.cell.col} and \code{covNijCk} are equivalent 
+and they compute the covariance between cell count \eqn{N_{ij}}
 and sum of column \eqn{k}, \eqn{C_k},
-\code{cov2cols} and \code{covCiCj} are equivalent and they compute the covariance between sums of two columns, 
+\code{cov2cols} and \code{covCiCj} are equivalent 
+and they compute the covariance between sums of two columns, 
 \eqn{C_i} and \eqn{C_j}.
-The index arguments refer to which entry or column sum is intended in the NNCT. 
-The argument \code{covN} must be the covariance between \eqn{N_{ij}} values which are obtained from NNCT by row-wise vectorization.
-These covariances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.
+The index arguments refer to which entry or 
+column sum is intended in the NNCT. 
+The argument \code{covN} must be the covariance 
+between \eqn{N_{ij}} values which are obtained 
+from NNCT by row-wise vectorization.
+These covariances are valid under RL or 
+conditional on \eqn{Q} and \eqn{R} under CSR.
 }
 \examples{
 n<-20  #or try sample(1:20,1)

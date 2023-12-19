@@ -94,6 +94,4 @@ varTk(Y,n1,k)$var
 }
 \author{
 Elvan Ceyhan
-
-Elvan Ceyhan
 }

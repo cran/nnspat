@@ -22,7 +22,7 @@ See the description above for further detail.
 Two functions: \code{correct.cf1} and \code{correct.cf1}.
 
 Each function yields matrices which are used in obtaining covariance matrices of \eqn{T_{ij}} values for 
-types I and II tests from the usual Chi-Square test of contingency tables (i.e. Pielou's test) applied
+types I and II tests from the usual Chi-Square test of contingency tables (i.e., Pielou's test) applied
 on NNCTs.
 The output matrices are to be term-by-term multiplied with the covariance matrix of 
 the entries of NNCT. See Sections 3.1 and 3.2 in 

@@ -21,7 +21,7 @@
 print.cellhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
 {
   cat("\n")
-  cat(strwrap(x$method, prefix = prefix), sep = "\n")
+  cat(strwrap(x$desc, prefix = prefix), sep = "\n")
   cat("\n")
   
   if (!inherits(x, "cellhtest"))
@@ -85,7 +85,7 @@ print.cellhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
   }
   
   if(!is.null(x$estimate)) {
-    cat("sample estimates of ",x$est.name2,":\n",sep = "")
+    cat("observed ",x$est.name2,":\n",sep = "")
     print(x$estimate,...)
   }
 } #end of the function
@@ -112,7 +112,7 @@ print.cellhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
 print.classhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
 {
   cat("\n")
-  cat(strwrap(x$method, prefix = prefix), sep = "\n")
+  cat(strwrap(x$desc, prefix = prefix), sep = "\n")
   cat("\n")
   
   if (!inherits(x, "classhtest"))
@@ -144,7 +144,7 @@ print.classhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
   cat("\n")
   
   if(!is.null(x$estimate)) {
-    cat("sample estimates of NNCT entries for \n")
+    cat("observed NNCT entries for \n")
     for (i in 1:k)
       cat(x$type,"class",clnames[i],"are",x$estimate[i,], "\n")
   }
@@ -173,7 +173,7 @@ print.classhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
 print.Chisqtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
 {
   cat("\n")
-  cat(strwrap(x$method, prefix = prefix), sep = "\n")
+  cat(strwrap(x$desc, prefix = prefix), sep = "\n")
   cat("\n")
   
   if (!inherits(x, "Chisqtest"))
@@ -212,8 +212,8 @@ print.Chisqtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
   
   if(!is.null(x$estimate)) {
     if (length(x$estimate)>1)
-    {cat("sample estimates of ",x$est.name2,":\n",sep = "")}
-    else {cat("sample estimate of ",x$est.name2,":\n",sep = "")}
+    {cat("observed ",x$est.name2,":\n",sep = "")}
+    else {cat("observed ",x$est.name2,":\n",sep = "")}
     print(est,...)
   }
 } #end of the function
@@ -241,7 +241,7 @@ print.Chisqtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
 print.refhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
 {
   cat("\n")
-  cat(strwrap(x$method, prefix = prefix), sep = "\n")
+  cat(strwrap(x$desc, prefix = prefix), sep = "\n")
   cat("\n")
   
   if (!inherits(x, "refhtest"))
@@ -292,7 +292,7 @@ print.refhtest <- function(x, digits = getOption("digits"), prefix = "\t",...)
   cat("\n")
   
   if(!is.null(x$estimate)) {
-    cat("sample estimates of diagonal rct entries are \n")
+    cat("observed diagonal rct entries are \n")
     print(x$estimate, digits=digits,...)
   }
 } #end of the function

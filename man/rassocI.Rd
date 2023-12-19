@@ -10,18 +10,18 @@ rassocI(X1, n2, p)
 \item{X1}{A set of 2D points representing the reference points, also referred as class 1 points.
 The generated points are associated in a type I sense (in a circular/radial fashion) with these points.}
 
-\item{n2}{A positive integer representing the number of class 2 (i.e. \eqn{X_2}) points to be generated.}
+\item{n2}{A positive integer representing the number of class 2 (i.e., \eqn{X_2}) points to be generated.}
 
 \item{p}{A real number between 0 and 1 representing the attraction probability of class 2 points associated
 with a randomly selected class 1 point (see the description below).}
 }
 \value{
 A \code{list} with the elements 
-\item{pat.type}{equals \code{"ref.gen"} for the bivariate pattern of association of class 2 (i.e. \eqn{X_2}) points with the reference
-points (i.e. \eqn{X_1}), indicates reference points are required to be entered as an argument in the function}
+\item{pat.type}{equals \code{"ref.gen"} for the bivariate pattern of association of class 2 (i.e., \eqn{X_2}) points with the reference
+points (i.e., \eqn{X_1}), indicates reference points are required to be entered as an argument in the function}
 \item{type}{The type of the point pattern}
-\item{parameters}{Radial (i.e. circular) between class attraction parameter controlling the level of association}
-\item{gen.points}{The output set of generated points (i.e. class 2 points) associated with reference (i.e.
+\item{parameters}{Radial (i.e., circular) between class attraction parameter controlling the level of association}
+\item{gen.points}{The output set of generated points (i.e., class 2 points) associated with reference (i.e.
 \eqn{X_1} points)}
 \item{ref.points}{The input set of reference points \eqn{X_1}, i.e., points with which generated class 2
 points are associated.}
@@ -30,17 +30,17 @@ points are associated.}
 points are generated in this pattern}
 \item{mtitle}{The \code{"main"} title for the plot of the point pattern}
 \item{num.points}{The \code{vector} of two numbers, which are the number of generated class 2 points and
-the number of reference (i.e. \eqn{X_1}) points.}
+the number of reference (i.e., \eqn{X_1}) points.}
 \item{xlimit,ylimit}{The possible ranges of the \eqn{x}- and \eqn{y}-coordinates of the generated and
 the reference points}
 }
 \description{
 An object of class \code{"SpatPatterns"}.
 
-Generates \code{n_2} 2D points associated with the given set of points (i.e. reference points) \eqn{X_1} in the
+Generates \code{n_2} 2D points associated with the given set of points (i.e., reference points) \eqn{X_1} in the
 type I fashion with circular (or radial) between class attraction parameter \code{p}, which is a probability value between 0 and 1.
 The generated points are intended to be from a different class, say class 2 (or \eqn{X_2} points) than the reference
-(i.e. \eqn{X_1} points, say class 1 points, denoted as \code{X1} as an argument of the function). 
+(i.e., \eqn{X_1} points, say class 1 points, denoted as \code{X1} as an argument of the function). 
 To generate \eqn{n_2} (denoted as \code{n2} as an argument of the function) \eqn{X_2} points, \eqn{n_2} of \eqn{X_1} points are randomly selected (possibly with replacement) and
 for a selected \code{X1} point, say \eqn{x_{1ref}}, a \eqn{Uniform(0,1)} number, \eqn{U}, is generated.
 If \eqn{U \le p}, a new point from the class 2, say \eqn{x_{2new}}, is generated within a

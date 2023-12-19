@@ -36,7 +36,7 @@ nonzero locations of the \eqn{A} matrix will be used in the computation of \eqn{
 \code{asyvarTk}). If \code{TRUE} the nonzero location matrix is used, otherwise the \eqn{A} matrix itself is used.}
 
 \item{asy.var}{A logical argument (default is \code{FALSE}) to determine whether the asymptotic variance or 
-the exact (i.e. finite sample) variance for the variance of \eqn{T_k} in its standardization. 
+the exact (i.e., finite sample) variance for the variance of \eqn{T_k} in its standardization. 
 If \code{TRUE}, the asymptotic variance is used for \eqn{Var[T_k]}, otherwise the exact variance is used.}
 
 \item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
@@ -74,7 +74,7 @@ Thus, the \eqn{z}-test for \eqn{T_k} is same as the cell-specific \eqn{z}-test f
 The logical argument \code{nonzero.mat} (default=\code{TRUE}) is for using the \eqn{A} matrix if \code{FALSE} or just the matrix of nonzero
 locations in the \eqn{A} matrix (if \code{TRUE}) in the computations.
 
-The logical argument \code{asy.var} (default=\code{FALSE}) is for using the asymptotic variance or the exact (i.e. finite
+The logical argument \code{asy.var} (default=\code{FALSE}) is for using the asymptotic variance or the exact (i.e., finite
 sample) variance for the variance of \eqn{T_k} in its standardization.
 If \code{asy.var=TRUE}, the asymptotic variance is used for \eqn{Var[T_k]} (see \code{asyvarTk}), otherwise the exact
 variance (see \code{varTk}) is used.

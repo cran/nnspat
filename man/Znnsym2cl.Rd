@@ -42,7 +42,7 @@ at the given confidence level \code{conf.level} and depends on the type of \code
 An object of class \code{"htest"} performing hypothesis test of equality of the expected value of the off-diagonal 
 cell counts (i.e., entries) under RL or CSR in the NNCT for \eqn{k=2} classes.
 That is, the test performs Dixon's or Pielou's (first type of) NN symmetry test which is appropriate 
-(i.e. have the appropriate asymptotic sampling distribution)
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data and for sparsely sample data, respectively.
 (See \insertCite{ceyhan:SWJ-spat-sym2014;textual}{nnspat} for more detail).
 

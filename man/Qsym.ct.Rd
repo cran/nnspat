@@ -8,7 +8,7 @@ Qsym.ct(x, lab, is.ipd = TRUE, ...)
 }
 \arguments{
 \item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
@@ -21,13 +21,13 @@ matrix, otherwise, \code{x} is taken as the data set with rows representing the 
 Returns the \eqn{k \times 3} QCT where \eqn{k} is the number of classes in the data set.
 }
 \description{
-Returns the \eqn{k \times 3} contingency table for \eqn{Q}-symmetry (i.e. \eqn{Q}-symmetry contingency table (QCT)) given the 
+Returns the \eqn{k \times 3} contingency table for \eqn{Q}-symmetry (i.e., \eqn{Q}-symmetry contingency table (QCT)) given the 
 IPD matrix or data set \code{x} where \eqn{k} is the number of classes in the data set.
 Each row in the QCT is the vector of number of points with shared NNs,
 \eqn{Q_i=(Q_{i0},Q_{i1},Q_{i2})} where \eqn{Q_{ij}} is the number of class \eqn{i} points that are NN to class \eqn{j} points
 for \eqn{j=0,1} and \eqn{Q_{i2}} is the number of class \eqn{i} points that are NN to class \eqn{j} or more points.
-That is, this function pools the cells 3 or larger together for \eqn{k} classes, so \eqn{Q_2}, \eqn{Q_3} etc. are pooled,
-so the column labels are \eqn{Q_0}, \eqn{Q_1} and \eqn{Q_2} with the last one is actually sum of \eqn{Q_j} for \eqn{j \ge 2}.
+That is, this function pools the cells 3 or larger together for \eqn{k} classes, so, \eqn{Q_2}, \eqn{Q_3} etc. are pooled,
+so, the column labels are \eqn{Q_0}, \eqn{Q_1} and \eqn{Q_2} with the last one is actually sum of \eqn{Q_j} for \eqn{j \ge 2}.
 Rows the QCT are labeled with the corresponding class labels.
 
 \eqn{Q}-symmetry is also equivalent to Pielou's second type of NN symmetry

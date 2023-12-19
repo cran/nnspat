@@ -9,19 +9,26 @@ Tval(W, R)
 \arguments{
 \item{W}{The incidence matrix, \eqn{W}, for the NN digraph}
 
-\item{R}{The number of reflexive NNs (i.e., twice the number of reflexive NN pairs)}
+\item{R}{The number of reflexive NNs 
+(i.e., twice the number of reflexive NN pairs)}
 }
 \value{
-Returns the \eqn{T} value. See the description above for the details of this quantity.
+Returns the \eqn{T} value. 
+See the description above for the details of this quantity.
 }
 \description{
-Returns the \eqn{T} value, which is the number of triplets \eqn{(z_i, z_j, z_k)} with 
-"\eqn{NN(z_i) = NN(z_j) = z_k} and \eqn{NN(z_k) = z_j}" where \eqn{NN(\cdot)} is the nearest neighbor function.
-Note that in the NN digraph, \eqn{T+R} is the sum of the indegrees of the points in the reflexive pairs.
+Returns the \eqn{T} value, 
+which is the number of triplets \eqn{(z_i, z_j, z_k)} with 
+"\eqn{NN(z_i) = NN(z_j) = z_k} and \eqn{NN(z_k) = z_j}" 
+where \eqn{NN(\cdot)} is the nearest neighbor function.
+Note that in the NN digraph, 
+\eqn{T+R} is the sum of the indegrees of the points in the reflexive pairs.
 
-This quantity (together with \eqn{Q} and \eqn{R}) is used in computing the variances and covariances of the entries of the
-reflexivity contingency table. See (\insertCite{ceyhan:NNreflexivity2017;textual}{nnspat}) for further
-details.
+This quantity (together with \eqn{Q} and \eqn{R}) is used in 
+computing the variances and covariances of the entries of the
+reflexivity contingency table. 
+See (\insertCite{ceyhan:NNreflexivity2017;textual}{nnspat}) 
+for further details.
 }
 \examples{
 #3D data points
@@ -49,7 +56,8 @@ Tval(W,R)
 
 }
 \seealso{
-\code{\link{Qval}}, \code{\link{Qvec}}, \code{\link{sharedNN}} and \code{\link{Rval}}
+\code{\link{Qval}}, \code{\link{Qvec}}, \code{\link{sharedNN}},
+and \code{\link{Rval}}
 }
 \author{
 Elvan Ceyhan

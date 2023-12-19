@@ -9,19 +9,25 @@ tct(ct, type = "III")
 \arguments{
 \item{ct}{A nearest neighbor contingency table}
 
-\item{type}{The type of the cell-specific test, default=\code{"III"}. Takes on values \code{"I"}-\code{"IV"} (or 
+\item{type}{The type of the cell-specific test, default=\code{"III"}. 
+Takes on values \code{"I"}-\code{"IV"} (or 
 equivalently \code{1-4}, respectively.}
 }
 \value{
 A \code{matrix} of the values of Type I-IV cell-specific tests
 }
 \description{
-Returns the \code{T} contingency table (TCT), which is a matrix of same dimension as, \code{ct}, 
-whose entries are the values of the Types I-IV cell-specific test statistics, \eqn{T^I_{ij}-T^{IV}_{ij}}. 
-The row and column names are inherited from \code{ct}. The type argument specifies the type
+Returns the \code{T} contingency table (TCT), 
+which is a matrix of same dimension as, \code{ct}, 
+whose entries are the values of 
+the Types I-IV cell-specific test statistics, 
+\eqn{T^I_{ij}-T^{IV}_{ij}}. 
+The row and column names are inherited from \code{ct}. 
+The type argument specifies the type
 of the cell-specific test among the types I-IV tests. 
 
-See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}) and the references therein.
+See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}) 
+and the references therein.
 }
 \examples{
 n<-20  #or try sample(1:20,1)

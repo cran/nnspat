@@ -93,7 +93,7 @@ they will be exactly equal to \eqn{n_1=}\code{round(n*ult.prop,0)} and \eqn{k_0=
 
 At each type, we stop when we first exceed \eqn{n_1} cases. That is, the procedure ends when number of cases \eqn{n_c}
 exceed \eqn{n_1}, and \eqn{n_c-n_1} of the cases (other than the initial case(s)) are randomly selected and relabeled as
-controls, i.e. 0s, so that the number of cases is exactly \eqn{n_1}.
+controls, i.e., 0s, so that the number of cases is exactly \eqn{n_1}.
 
 In the output cases are labeled as 1 and controls as 0, and initial contagious case is marked with a red cross
 in the plot of the pattern.

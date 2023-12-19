@@ -7,24 +7,36 @@
 NNdist(x, is.ipd = TRUE, ...)
 }
 \arguments{
-\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+\item{x}{The IPD matrix (if \code{is.ipd=TRUE}) 
+or a data set of points in matrix or data frame form where points
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
-\item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
-matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
+\item{is.ipd}{A logical parameter (default=\code{TRUE}). 
+If \code{TRUE}, \code{x} is taken as the inter-point distance matrix, 
+otherwise, \code{x} is taken as the data set 
+with rows representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, 
+such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
-Returns an \eqn{n \times 2} matrix where \eqn{n} is data size (i.e. number of subjects) and first column is the subject
+Returns an \eqn{n \times 2} matrix where \eqn{n} is data size 
+(i.e., number of subjects) and first column is the subject
 index and second column is the NN distances.
 }
 \description{
-Returns the distances between subjects and their NNs. The output is an \eqn{n \times 2} matrix where \eqn{n} is the data size
-and first column is the subject index and second column contains the corresponding distances to NN subjects.
+Returns the distances between subjects and their NNs. 
+The output is an \eqn{n \times 2} matrix 
+where \eqn{n} is the data size
+and first column is the subject index and 
+second column contains the corresponding distances to NN subjects.
 
-The argument \code{is.ipd} is a logical argument (default=\code{TRUE}) to determine the structure of the argument \code{x}.
-If \code{TRUE}, \code{x} is taken to be the inter-point distance (IPD) matrix, and if \code{FALSE}, \code{x} is taken to be the data set
+The argument \code{is.ipd} is a logical argument 
+(default=\code{TRUE}) to determine the structure of the argument \code{x}.
+If \code{TRUE}, \code{x} is taken to be 
+the inter-point distance (IPD) matrix, 
+and if \code{FALSE}, \code{x} is taken to be the data set
 with rows representing the data points.
 }
 \examples{
@@ -45,7 +57,8 @@ NNdist(X,is.ipd = FALSE)
 
 }
 \seealso{
-\code{\link{kthNNdist}}, \code{\link{kNNdist}}, and \code{\link{NNdist2cl}}
+\code{\link{kthNNdist}}, \code{\link{kNNdist}}, 
+and \code{\link{NNdist2cl}}
 }
 \author{
 Elvan Ceyhan

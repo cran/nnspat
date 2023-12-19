@@ -12,20 +12,21 @@ kNNdist(x, k, is.ipd = TRUE, ...)
 }
 \arguments{
 \item{x}{The IPD matrix (if \code{is.ipd=TRUE}) or a data set of points in matrix or data frame form where points
-correspond to the rows (if \code{is.ipd = FALSEALSE}).}
+correspond to the rows (if \code{is.ipd = FALSE}).}
 
 \item{k}{Integer specifying the number of NNs (of subjects).}
 
 \item{is.ipd}{A logical parameter (default=\code{TRUE}). If \code{TRUE}, \code{x} is taken as the inter-point distance
 matrix, otherwise, \code{x} is taken as the data set with rows representing the data points.}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function.}
+\item{\dots}{are for further arguments, such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function.}
 }
 \value{
-\code{kthNNdist} returns an \eqn{n \times 2} matrix where \eqn{n} is data size (i.e. number of subjects) and
+\code{kthNNdist} returns an \eqn{n \times 2} matrix where \eqn{n} is data size (i.e., number of subjects) and
 first column is the subject index and second column is the \eqn{k^{th}} NN distances.
 
-\code{kNNdist} returns an \eqn{n \times (k+1)} matrix where \eqn{n} is data size (i.e. number of subjects) and
+\code{kNNdist} returns an \eqn{n \times (k+1)} matrix where \eqn{n} is data size (i.e., number of subjects) and
 first column is the subject index and the remaining \code{k} columns contain the corresponding 
 distances to \code{k} NN subjects.
 }

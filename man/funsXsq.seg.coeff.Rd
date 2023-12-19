@@ -44,7 +44,7 @@ Two functions: \code{Xsq.seg.coeff.ct} and \code{Xsq.seg.coeff}.
 Each one performs hypothesis tests of (simultaneous) equality of the segregation coefficients in an NNCT
 to the ones under RL or CSR.
 That is, each performs the combined Chi-square test for segregation coefficients which is appropriate 
-(i.e. have the appropriate asymptotic sampling distribution)
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data.
 (See \insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat} for more detail).
 
@@ -55,9 +55,9 @@ for the two-class case.
 (See \insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat} for more detail).
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{k(k+1)/2-1}, description of the 
-alternative with the corresponding null values (i.e. expected values) of the segregation coefficients in the NNCT
-(which are 0 for this function) and also the sample estimates (i.e. observed values) of the segregation
-coefficients. The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) of the segregation coefficients in the NNCT
+(which are 0 for this function) and also the sample estimates (i.e., observed values) of the segregation
+coefficients. The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis for all cells \eqn{(i,j)} is that the corresponding segregation coefficients are all 
 equal to the expected value (which is 0) under RL or CSR.

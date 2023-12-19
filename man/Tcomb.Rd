@@ -51,7 +51,7 @@ in obtaining the \eqn{T_{comb}}.
 The logical argument \code{nonzero.mat} (default=\code{TRUE}) is for using the \eqn{A} matrix if \code{FALSE} or just the matrix of nonzero
 locations in the \eqn{A} matrix (if \code{TRUE}) in the computations.
 
-The logical argument \code{asy.cov} (default=\code{FALSE}) is for using the asymptotic covariance or the exact (i.e. finite
+The logical argument \code{asy.cov} (default=\code{FALSE}) is for using the asymptotic covariance or the exact (i.e., finite
 sample) covariance for the vector of \eqn{T_k} values used in \code{Tcomb} in the standardization of \eqn{T_{comb}}.
 If \code{asy.cov=TRUE}, the asymptotic covariance is used, otherwise the exact covariance is used. 
   

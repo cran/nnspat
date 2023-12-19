@@ -12,7 +12,7 @@ rhor.clust(n, k, d, sd = 1/6, distribution = c("uniform", "bvnormal"))
 \item{k}{A positive integer representing the number of clusters to be generated}
 
 \item{d}{Horizontal shift indicating the level of clustering in the data. Larger absolute values in either
-direction (i.e. positive or negative) would yield stronger clustering.}
+direction (i.e., positive or negative) would yield stronger clustering.}
 
 \item{sd}{The standard deviation of the components of the bivariate normal distribution with default \eqn{sd=1/6}, 
 used only when \code{distribution="bvnormal"}.}
@@ -43,7 +43,7 @@ the others are \eqn{d} units shifted horizontally from each other so that their 
 \eqn{(j-1)+(j-1) d} for \eqn{j=1,2,\ldots,k}.
 
 If \code{distribution="bvnormal"}, the points are generated from the bivariate normal distribution with means equal to the
-centers of the above squares (i.e. for each cluster with mean=(j+(j-1)d-1/2,1/2) for \eqn{j=1,2,\ldots,k}
+centers of the above squares (i.e., for each cluster with mean=(j+(j-1)d-1/2,1/2) for \eqn{j=1,2,\ldots,k}
 and the covariance matrix \eqn{sd I_2}, where \eqn{I_2} is the \eqn{2 \times 2} identity matrix.
 
 Notice that the clusters are more separated, i.e., generated data indicates more clear clusters as \eqn{d} increases

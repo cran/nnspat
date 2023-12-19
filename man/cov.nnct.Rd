@@ -9,26 +9,37 @@ cov.nnct(ct, varN, Q, R, byrow = TRUE)
 \arguments{
 \item{ct}{A nearest neighbor contingency table}
 
-\item{varN}{The \eqn{k \times k} variance matrix of cell counts of NNCT, \code{ct}.}
+\item{varN}{The \eqn{k \times k} variance matrix of 
+cell counts of NNCT, \code{ct}.}
 
 \item{Q}{The number of shared NNs}
 
-\item{R}{The number of reflexive NNs (i.e., twice the number of reflexive NN pairs)}
+\item{R}{The number of reflexive NNs (i.e.,
+twice the number of reflexive NN pairs)}
 
-\item{byrow}{A logical argument (default=\code{TRUE}). If \code{TRUE}, rows of \code{ct} are appended to obtain the vector
+\item{byrow}{A logical argument (default=\code{TRUE}). 
+If \code{TRUE}, rows of \code{ct} are appended to obtain the vector
 and if \code{FALSE} columns of \code{ct} are appended to obtain the vector.}
 }
 \value{
-The \eqn{k^2 \times k^2} covariance matrix of cell counts \eqn{N_{ij}} for \eqn{i,j=1,\ldots,k} in the NNCT, \code{ct}
+The \eqn{k^2 \times k^2} covariance matrix of 
+cell counts \eqn{N_{ij}} for \eqn{i,j=1,\ldots,k} in the NNCT, \code{ct}
 }
 \description{
-Returns the covariance matrix of cell counts \eqn{N_{ij}} for \eqn{i,j=1,\ldots,k} in the NNCT, \code{ct}. 
-The covariance matrix is of dimension \eqn{k^2 \times k^2} and its entries are \eqn{cov(N_{ij},N_{kl})} when \eqn{N_{ij}} values are
-by default corresponding to the row-wise vectorization of \code{ct}. If \code{byrow=FALSE}, the column-wise 
+Returns the covariance matrix of 
+cell counts \eqn{N_{ij}} for \eqn{i,j=1,\ldots,k} 
+in the NNCT, \code{ct}. 
+The covariance matrix is of dimension \eqn{k^2 \times k^2} 
+and its entries are \eqn{cov(N_{ij},N_{kl})} 
+when \eqn{N_{ij}} values are
+by default corresponding to the row-wise vectorization of \code{ct}. 
+If \code{byrow=FALSE}, the column-wise 
 vectorization of \code{ct} is used.
-These covariances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.
+These covariances are valid under RL 
+or conditional on \eqn{Q} and \eqn{R} under CSR.
 
-See also (\insertCite{dixon:1994,dixon:NNCTEco2002,ceyhan:eest-2010,ceyhan:jkss-posthoc-2017;textual}{nnspat}).
+See also 
+(\insertCite{dixon:1994,dixon:NNCTEco2002,ceyhan:eest-2010,ceyhan:jkss-posthoc-2017;textual}{nnspat}).
 }
 \examples{
 n<-20  #or try sample(1:20,1)
@@ -82,7 +93,8 @@ cov.nnct(ct,varN,Qv,Rv)
 \insertAllCited{}
 }
 \seealso{
-\code{\link{covNrow2col}}, \code{\link{cov.tct}} and \code{\link{cov.nnsym}}
+\code{\link{covNrow2col}}, \code{\link{cov.tct}},
+and \code{\link{cov.nnsym}}
 }
 \author{
 Elvan Ceyhan

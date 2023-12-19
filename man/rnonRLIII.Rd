@@ -59,11 +59,11 @@ The number of cases will be \eqn{n_1} on the average if the argument \code{poiss
 (i.e., \eqn{n_1=}\code{rpois(1,round(n*prop,0))} ), otherwise \eqn{n_1=}\code{round(n*prop,0)}.
 We stop when we first exceed \eqn{n_1} cases. \code{rho} has to be positive for \code{prob} to be a \code{vector} of probabilities,
 and for a given \code{rho}, \code{pow} must be \eqn{> - \ln(rho)/\ln(1-d_{ij}/d_{\max})},
-also, when \code{pow} is given, \code{rho} must be \eqn{< (1-d_{ij}/d_{\max})^{-pow}}.
+also when \code{pow} is given, \code{rho} must be \eqn{< (1-d_{ij}/d_{\max})^{-pow}}.
 If \code{rand.init=TRUE}, initial case is selected randomly among the data points,
 otherwise first entry is chosen as the case (or case is recorded as the first entry) in the data set, \code{dat}. 
 
-Algorithmically, first all dat points are treated as non-cases (i.e. controls or healthy subjects).
+Algorithmically, first all dat points are treated as non-cases (i.e., controls or healthy subjects).
 Then the function follows the following steps for labeling of the points: 
 
 step 0: \eqn{n_1} is generated randomly from a Poisson distribution with \code{mean = round(n*prop,0)}, so that the 
@@ -79,7 +79,7 @@ with infection probabilities \eqn{prob=rho (1-d_{ij}/d_{\max})^{pow}}, see the d
 of the parameters in the \code{prob}.
 
 step 3: The procedure ends when number of cases \eqn{n_c} exceeds \eqn{n_1}, and \eqn{n_c-n_1} of the cases (other than the
-initial contagious case) are randomly selected and relabeled as controls, i.e. 0s,
+initial contagious case) are randomly selected and relabeled as controls, i.e., 0s,
 so that the number of cases is exactly \eqn{n_1}.
 
 In the output cases are labeled as 1 and controls as 0, and initial contagious case is marked with a red cross

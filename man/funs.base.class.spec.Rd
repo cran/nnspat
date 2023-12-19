@@ -13,7 +13,7 @@ base.class.spec(dat, lab, ...)
 \arguments{
 \item{ct}{A nearest neighbor contingency table, used in \code{base.class.spec.ct} only}
 
-\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct} ;
+\item{covN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized entries of NNCT, \code{ct};
 used in \code{base.class.spec.ct} only.}
 
 \item{dat}{The data set in one or higher dimensions, each row corresponds to a data point,
@@ -52,8 +52,8 @@ The test for each row \eqn{i} is based on the chi-squared approximation of the c
 and are due to \insertCite{dixon:NNCTEco2002;textual}{nnspat}.
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} for each base class \eqn{i}, description of the 
-alternative with the corresponding null values (i.e. expected values) for the row \eqn{i}, estimates for the entries in row \eqn{i}
-for \eqn{i=1,\ldots,k}. The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) for the row \eqn{i}, estimates for the entries in row \eqn{i}
+for \eqn{i=1,\ldots,k}. The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis for each row is that the corresponding \eqn{N_{ij}} entries in row \eqn{i} are equal to their 
 expected values under RL or CSR.

@@ -18,28 +18,28 @@ the bivariate normal distribution has covariance \code{BVN((0,0),sigma*I_2)} wit
 \value{
 A \code{list} with the elements
 \item{pat.type}{=\code{"ref.gen"} for the bivariate pattern of association of class 2 points with the reference points
-(i.e. \eqn{X_1}), indicates reference points are required to be entered as an argument in the function}
+(i.e., \eqn{X_1}), indicates reference points are required to be entered as an argument in the function}
 \item{type}{The type of the point pattern}
 \item{parameters}{The variance of the Gaussian marginals controlling the level of association, where
 the bivariate normal distribution has covariance \eqn{\sigma I_2} with \eqn{I_2} being the \eqn{2 \times 2} identity matrix.}
-\item{gen.points}{The output set of generated points (i.e. class 2 points) associated with reference (i.e.
+\item{gen.points}{The output set of generated points (i.e., class 2 points) associated with reference (i.e.
 \eqn{X_1} points)}
 \item{ref.points}{The input set of reference points \eqn{X_1}, i.e., points with which generated class 2 points
 are associated.}
 \item{desc.pat}{Description of the point pattern}
 \item{mtitle}{The \code{"main"} title for the plot of the point pattern}
 \item{num.points}{The \code{vector} of two numbers, which are the number of generated class 2 points and
-the number of reference (i.e. \eqn{X_1}) points.}
+the number of reference (i.e., \eqn{X_1}) points.}
 \item{xlimit,ylimit}{The possible ranges of the \eqn{x}- and \eqn{y}-coordinates of the generated and the reference points}
 }
 \description{
 An object of class \code{"SpatPatterns"}.
 
-Generates \code{n_2} 2D points associated with the given set of points (i.e. reference points) \eqn{X_1} in the
+Generates \code{n_2} 2D points associated with the given set of points (i.e., reference points) \eqn{X_1} in the
 type G fashion with the parameter sigma which is a positive real number representing the variance of the
 Gaussian marginals.
 The generated points are intended to be from a different class, say class 2 (or \eqn{X_2} points) than the reference
-(i.e. \eqn{X_1} points, say class 1 points, denoted as \code{X1} as an argument of the function), say class 1 points). 
+(i.e., \eqn{X_1} points, say class 1 points, denoted as \code{X1} as an argument of the function), say class 1 points). 
 To generate \eqn{n_2} (denoted as \code{n2} as an argument of the function)\eqn{X_2} points, \eqn{n_2} of \eqn{X_1} points are randomly selected (possibly with replacement) and
 for a selected \code{X1} point, say \eqn{x_{1ref}},
 a new point from the class 2, say \eqn{x_{2new}}, is generated from a bivariate normal distribution centered at \eqn{x_{1ref}}
@@ -51,7 +51,7 @@ goes to infinity.
 For type G association, it is recommended to take \eqn{\sigma \le 0.10}  times length of the shorter
 edge of a rectangular study region, or take \eqn{r_0 = 1/(k \sqrt{\hat \rho})} with the appropriate choice of \eqn{k} 
 to get an association pattern more robust to differences in relative abundances
-(i.e. the choice of \eqn{k} implies \eqn{\sigma \le 0.10} times length of the shorter edge to have alternative patterns more 
+(i.e., the choice of \eqn{k} implies \eqn{\sigma \le 0.10} times length of the shorter edge to have alternative patterns more 
 robust to differences in sample sizes).
 Here \eqn{\hat \rho} is the 
 estimated intensity of points in the study region (i.e., # of points divided by the area of the region). 

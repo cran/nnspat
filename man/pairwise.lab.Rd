@@ -7,20 +7,25 @@
 pairwise.lab(dat, lab, i, j)
 }
 \arguments{
-\item{dat}{The data set in one or higher dimensions, each row corresponds to a data point.}
+\item{dat}{The data set in one or higher dimensions,
+each row corresponds to a data point.}
 
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 
-\item{i, j}{Label of the classes that are to be retained in the post-hoc comparison.}
+\item{i, j}{Label of the classes that are to be retained 
+in the post-hoc comparison.}
 }
 \value{
 A \code{list} with two elements
-\item{data.pair}{The type of the pattern from which points are to be generated}
+\item{data.pair}{The type of the pattern 
+from which points are to be generated}
 \item{lab.pair}{The \code{"main"} title for the plot of the point pattern}
 }
 \description{
-Keeps only the specified labels \eqn{i} and \eqn{j} and returns the data from classes with these labes and also
-the corresponding label vector having class labels \eqn{i} and \eqn{j} only.
+Keeps only the specified labels \eqn{i} and \eqn{j} 
+and returns the data from classes with these labels and also
+the corresponding label vector having 
+class labels \eqn{i} and \eqn{j} only.
 
 See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}).
 }

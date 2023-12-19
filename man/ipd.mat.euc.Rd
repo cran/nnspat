@@ -7,24 +7,35 @@
 ipd.mat.euc(x, y = NULL)
 }
 \arguments{
-\item{x}{A set of points in matrix or data frame form where points correspond to the rows.}
+\item{x}{A set of points in matrix or data frame form 
+where points correspond to the rows.}
 
-\item{y}{A set of points in matrix or data frame form where points correspond to the rows (default=\code{NULL}).}
+\item{y}{A set of points in matrix or data frame form 
+where points correspond to the rows (default=\code{NULL}).}
 }
 \value{
-A distance matrix whose i,j-th entry is the Euclidean distance between row \eqn{i} of \code{x} and
-row \eqn{j} of \code{y} if \code{y} is provided, otherwise i,j-th entry is 
+A distance matrix whose  \eqn{i,j}-th entry is 
+the Euclidean distance between row \eqn{i} of \code{x} and
+row \eqn{j} of \code{y} if \code{y} is provided, 
+otherwise  \eqn{i,j}-th entry is 
 the Euclidean distance between rows \eqn{i} and \eqn{j} of \code{x}.
 }
 \description{
-Returns the Euclidean interpoint distance (IPD) matrix of a given the set of points \code{x} and \code{y} using 
-two for loops with the \code{\link{euc.dist}} function of the current package.
-If \code{y} is provided (default=\code{NULL}) it yields a matrix of Euclidean distances between the rows of \code{x} and rows of \code{y},
-otherwise it provides a square matrix with i,j-th entry being the Euclidean distance between row \eqn{i} and row \eqn{j} 
-of \code{x}. This function is different from the \code{\link{ipd.mat}} function in this package.
-\code{\link{ipd.mat}} returns the full distance matrix for a variety of distance metrics (including the
-Euclidean metric), while \code{\link{ipd.mat.euc}} uses the Euclidean distance metric only.
-\code{ipd.mat.euc(X)} and \code{ipd.mat(X)} yield the same output for a set of points \code{X},
+Returns the Euclidean interpoint distance (IPD) matrix of 
+a given the set of points \code{x} and \code{y} using two for loops 
+with the \code{\link{euc.dist}} function of the current package.
+If \code{y} is provided (default=\code{NULL}) 
+it yields a matrix of Euclidean distances 
+between the rows of \code{x} and rows of \code{y},
+otherwise it provides a square matrix with \eqn{i,j}-th entry 
+being the Euclidean distance between row \eqn{i} and row \eqn{j} of \code{x}. 
+This function is different from 
+the \code{\link{ipd.mat}} function in this package.
+\code{\link{ipd.mat}} returns the full distance matrix 
+for a variety of distance metrics (including the Euclidean metric),
+while \code{\link{ipd.mat.euc}} uses the Euclidean distance metric only.
+\code{ipd.mat.euc(X)} and \code{ipd.mat(X)} yield 
+the same output for a set of points \code{X},
 as the default metric in \code{\link{ipd.mat}} is also \code{"euclidean"}.
 }
 \examples{
@@ -52,7 +63,8 @@ ipd.mat.euc(X[1,],Y[3,])
 
 }
 \seealso{
-\code{\link[stats]{dist}}, \code{\link{ipd.mat.euc}}, \code{\link{dist.std.data}}
+\code{\link[stats]{dist}}, \code{\link{ipd.mat.euc}}, 
+and \code{\link{dist.std.data}}
 }
 \author{
 Elvan Ceyhan

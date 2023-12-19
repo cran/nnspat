@@ -24,7 +24,7 @@ Zseg.coeff(
 \arguments{
 \item{ct}{A nearest neighbor contingency table, used in \code{Zseg.coeff.ct} only}
 
-\item{VarSC}{The variance matrix for the segregation coefficients in the NNCT, \code{ct} ; used in \code{Zseg.coeff.ct} only}
+\item{VarSC}{The variance matrix for the segregation coefficients in the NNCT, \code{ct}; used in \code{Zseg.coeff.ct} only}
 
 \item{alternative}{Type of the alternative hypothesis in the test, one of \code{"two.sided"}, \code{"less"} or \code{"greater"}.}
 
@@ -44,7 +44,7 @@ A \code{list} with the elements
 \item{statistic}{The \code{matrix} of test statistics for the segregation coefficients}
 \item{stat.names}{Name of the test statistics}
 \item{p.value}{The \code{matrix} of \eqn{p}-values for the hypothesis test for the corresponding alternative}
-\item{LCL,UCL}{Matrix of Lower and Upper Confidence Levels for the segregation coefficients at the given
+\item{LCL,UCL}{Matrix of lower and upper confidence levels for the segregation coefficients at the given
 confidence level \code{conf.level} and depends on the type of \code{alternative}.}
 \item{conf.int}{Confidence interval for segregation coefficients, it is \code{NULL} here since we provide the upper 
 and lower confidence limits as \eqn{k \times k} matrices.} 
@@ -52,7 +52,7 @@ and lower confidence limits as \eqn{k \times k} matrices.}
 provided in \code{conf.level}.}
 \item{estimate}{Estimate of the parameter, i.e., matrix of the observed segregation coefficients}
 \item{est.name,est.name2}{Names of the estimates, both are same in this function}
-\item{null.value}{Hypothesized null values for the parameters, i.e. expected values of the segregation 
+\item{null.value}{Hypothesized null values for the parameters, i.e., expected values of the segregation 
 coefficients, which are all 0 under RL or CSR.}
 \item{null.name}{Name of the null value}
 \item{alternative}{Type of the alternative hypothesis in the test, one of \code{"two.sided"}, \code{"less"} or \code{"greater"}}
@@ -70,16 +70,16 @@ in the NNCT.
 
 The test for each cell \eqn{i,j} is based on the normal approximation of the corresponding segregation coefficient.
 That is, each performs the segregation coefficient tests which are appropriate 
-(i.e. have the appropriate asymptotic sampling distribution)
+(i.e., have the appropriate asymptotic sampling distribution)
 for completely mapped data.
 The segregation coefficients in the multi-class case are the extension of Pielou's segregation coefficient
 for the two-class case.
 (See \insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat} for more detail).
 
 Each function yields a contingency table of the test statistics, \eqn{p}-values for the corresponding 
-alternative, lower and upper confidence levels, sample estimates (i.e. observed values) and null value
-(i.e. expected value, which is 0) for the segregation coefficients
-and also names of the test statistics, estimates, null value and the method and the data set used.
+alternative, lower and upper confidence levels, sample estimates (i.e., observed values) and null value
+(i.e., expected value, which is 0) for the segregation coefficients
+and also names of the test statistics, estimates, null value, the description of the test, and the data set used.
 
 The null hypothesis for each cell \eqn{i,j} is that the corresponding segregation coefficient equal to the expected value
 (which is 0) under RL or CSR.

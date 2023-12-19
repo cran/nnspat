@@ -14,7 +14,7 @@ covNii(dat, lab, ...)
 \item{ct}{The NNCT or SCCT, used in \code{covNii.ct} only}
 
 \item{Vsq}{The \code{vector} of variances of the diagonal entries \eqn{N_{ii}} in the NNCT or the self entries
-(i.e. the first column) in the SCCT, used in \code{covNii.ct} only}
+(i.e., the first column) in the SCCT, used in \code{covNii.ct} only}
 
 \item{Q}{The number of shared NNs, used in \code{covNii.ct} only}
 
@@ -28,7 +28,7 @@ used in \code{covNii} only}
 \item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function, used in \code{covNii} only}
 }
 \value{
-A \code{vector} of length \eqn{k} whose entries are the variances of the self entries (i.e. first column) in a
+A \code{vector} of length \eqn{k} whose entries are the variances of the self entries (i.e., first column) in a
 species correspondence contingency table (SCCT).
 
 The \eqn{k \times k} covariance matrix of cell counts \eqn{S_i} in the self (i.e., first) column of the SCCT
@@ -37,7 +37,7 @@ or of the diagonal cell counts \eqn{N_{ii}} for \eqn{i=1,\ldots,k} in the NNCT.
 \description{
 Two functions: \code{covNii.ct} and \code{covNii}.
 
-Both functions return the covariance matrix of the self entries (i.e. first column entries) in a
+Both functions return the covariance matrix of the self entries (i.e., first column entries) in a
 species correspondence contingency table (SCCT)
 but have different arguments (see the parameter list below).
 The covariance matrix is of dimension \eqn{k \times k} and its entries are \eqn{cov(S_i,S_j)} where \eqn{S_i} values are
@@ -46,7 +46,7 @@ These covariances are valid under RL or conditional on \eqn{Q} and \eqn{R} under
 
 The argument \code{ct} which is used in \code{covNii.ct} only, can be either the NNCT or SCCT.
 And the argument \code{Vsq} is the vector of variances of the diagonal entries \eqn{N_{ii}} in the NNCT or the self entries
-(i.e. the first column) in the SCCT.
+(i.e., the first column) in the SCCT.
 
 See also (\insertCite{ceyhan:NNCorrespond2018;textual}{nnspat}).
 }

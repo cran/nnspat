@@ -24,57 +24,86 @@ Zseg.ind(
 )
 }
 \arguments{
-\item{ct}{A nearest neighbor contingency table, used in \code{Zseg.ind.ct} only}
+\item{ct}{A nearest neighbor contingency table, 
+used in \code{Zseg.ind.ct} only}
 
-\item{varN}{The variance matrix for cell counts in the NNCT, \code{ct} ; used in \code{Zseg.ind.ct} only}
+\item{varN}{The variance matrix for cell counts in the NNCT, 
+\code{ct}; used in \code{Zseg.ind.ct} only}
 
-\item{inf.corr}{A logical argument (default=\code{FALSE}). If \code{TRUE}, indices are modified so that 
-they are finite and if \code{FALSE} the above definition in the description is used.}
+\item{inf.corr}{A logical argument (default=\code{FALSE}). 
+If \code{TRUE}, indices are modified so that 
+they are finite and 
+if \code{FALSE} the above definition in the description is used.}
 
-\item{alternative}{Type of the alternative hypothesis in the test, one of \code{"two.sided"}, \code{"less"} or \code{"greater"}.}
+\item{alternative}{Type of the alternative hypothesis in the test, 
+one of \code{"two.sided"}, \code{"less"} or \code{"greater"}.}
 
-\item{conf.level}{Level of the upper and lower confidence limits, default is \code{0.95}, for the segregation indices}
+\item{conf.level}{Level of the upper and lower confidence limits, 
+default is \code{0.95}, for the segregation indices}
 
-\item{dat}{The data set in one or higher dimensions, each row corresponds to a data point,
+\item{dat}{The data set in one or higher dimensions, 
+each row corresponds to a data point,
 used in \code{Zseg.ind} only}
 
-\item{lab}{The \code{vector} of class labels (numerical or categorical), used in \code{Zseg.ind} only}
+\item{lab}{The \code{vector} of class labels (numerical or categorical), 
+used in \code{Zseg.ind} only}
 
-\item{\dots}{are for further arguments, such as \code{method} and \code{p}, passed to the \code{\link[stats]{dist}} function, used in \code{Zseg.ind} only}
+\item{\dots}{are for further arguments, 
+such as \code{method} and \code{p}, 
+passed to the \code{\link[stats]{dist}} function,
+ used in \code{Zseg.ind} only}
 }
 \value{
 A \code{list} with the elements
-\item{statistic}{The \code{matrix} of test statistics for the segregation indices}
+\item{statistic}{The \code{matrix} of test statistics 
+for the segregation indices}
 \item{stat.names}{Name of the test statistics}
-\item{p.value}{The \code{matrix} of \eqn{p}-values for the hypothesis test for the corresponding alternative}
-\item{LCL,UCL}{Matrix of Lower and Upper Confidence Levels for the segregation indices at the given confidence
+\item{p.value}{The \code{matrix} of \eqn{p}-values 
+for the hypothesis test for the corresponding alternative}
+\item{LCL,UCL}{Matrix of lower and upper confidence levels for 
+the segregation indices at the given confidence
 level \code{conf.level} and depends on the type of \code{alternative}.}
-\item{cnf.lvl}{Level of the upper and lower confidence limits of the segregation indices,
+\item{cnf.lvl}{Level of the upper 
+and lower confidence limits of the segregation indices,
 provided in \code{conf.level}.}
-\item{estimate}{Estimate of the parameter, i.e., matrix of the observed segregation indices}
-\item{est.name,est.name2}{Names of the estimates, both are same in this function}
-\item{null.value}{Hypothesized values for the parameters, i.e. the null values of the segregation indices, 
+\item{estimate}{Estimate of the parameter, 
+i.e., matrix of the observed segregation indices}
+\item{est.name,est.name2}{Names of the estimates,
+ both are same in this function}
+\item{null.value}{Hypothesized values for the parameters, 
+i.e., the null values of the segregation indices, 
 which are all 0 under RL or CSR.}
 \item{null.name}{Name of the null value}
-\item{alternative}{Type of the alternative hypothesis in the test, one of \code{"two.sided"}, \code{"less"} or \code{"greater"}}
+\item{alternative}{Type of the alternative hypothesis in the test, 
+one of \code{"two.sided"}, \code{"less"} or \code{"greater"}}
 \item{method}{Description of the hypothesis test}
-\item{ct.name}{Name of the contingency table, \code{ct}, returned by \code{Zseg.ind.ct} only}
-\item{data.name}{Name of the data set, \code{dat}, returned by \code{Zseg.ind} only}
+\item{ct.name}{Name of the contingency table, \code{ct}, 
+returned by \code{Zseg.ind.ct} only}
+\item{data.name}{Name of the data set, \code{dat}, 
+returned by \code{Zseg.ind} only}
 }
 \description{
 Two functions: \code{Zseg.ind.ct} and \code{Zseg.ind}.
 
-Both functions are objects of class \code{"cellhtest"} but with different arguments (see the parameter list below).
+Both functions are objects of class \code{"cellhtest"} 
+but with different arguments (see the parameter list below).
 Each one performs hypothesis tests of deviations of 
-segregation indices from their expected values under RL or CSR for each segregation index in the NNCT.
-The test for each cell \eqn{i,j} is based on the normal approximation of the corresponding segregation index.
+segregation indices from their expected values 
+under RL or CSR for each segregation index in the NNCT.
+The test for each cell \eqn{i,j} is based on the normal approximation 
+of the corresponding segregation index.
 
-Each function yields a contingency table of the test statistics, \eqn{p}-values for the corresponding 
-alternative, lower and upper confidence levels, sample estimates (i.e. observed values) and null value(s) (i.e. expected values) for the segregation indices
-and also names of the test statistics, estimates, null value and the method and the data set used.
+Each function yields a contingency table of the test statistics, 
+\eqn{p}-values for the corresponding 
+alternative, lower and upper confidence levels, 
+sample estimates (i.e., observed values) and 
+null value(s) (i.e., expected values) for the segregation indices
+and also names of the test statistics, estimates, 
+null value, the description of the test, and the data set used.
 
-The null hypothesis for each cell \eqn{i,j} is that the corresponding segregation index equal to the expected value
-(which is 0) under RL or CSR.
+The null hypothesis for each cell \eqn{i,j} is 
+that the corresponding segregation index 
+equal to the expected value (which is 0) under RL or CSR.
 
 See also (\insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat}).
 }

@@ -51,22 +51,39 @@ and for \eqn{l=n_{2h},+1,\ldots,n_2}, \eqn{Y_l=Y_{l-n_{2h}}+r (\cos(T_l), \sin(T
 \eqn{T_l \stackrel{iid}{\sim} Uniform(0,2 \pi)}.
 This version is the case IV in the article (\insertCite{ceyhan:NNCorrespond2018;textual}{nnspat}).
 
-If \code{distribution="bvnormal"}, the points from class 1, say \eqn{X_i} are generated as follows: 
-\eqn{X_i \stackrel{iid}{\sim} BVN(CM(S_1),I_{2x})} where \eqn{CM(S_1)} is the center of mass of \eqn{S_1} and I_{2x} is a \eqn{2 \times 2} matrix with diagonals
-equal to \eqn{s_1^2} with \eqn{s_1=(c1r[2]-c1r[1])/3} and off-diagonals are 0 for \eqn{i=1,2,\ldots,n_{1h}} where \eqn{n_{1h}=\lfloor{n_1/2\rfloor}},
-and for \eqn{k=n_{1h}+1,\ldots,n_1}, \eqn{X_k = Z_k+r (\cos(T_k), \sin(T_k))} where \eqn{Z_k \sim BVN(X_{k-n_{1h}}, I_2(r_0))}
-with \eqn{I_2(r_0)} being the \eqn{2 \times 2} matrix with diagonals \eqn{r_0/3} and 0 off-diagonals, \eqn{r \sim Uniform(0,r_0)} and
+If \code{distribution="bvnormal"}, the points from class 1, 
+say \eqn{X_i} are generated as follows: 
+\eqn{X_i \stackrel{iid}{\sim} BVN(CM(S_1),I_{2x})} 
+where \eqn{CM(S_1)} is the center of mass of \eqn{S_1} 
+and \eqn{I_{2x}} is a \eqn{2 \times 2} matrix with diagonals
+equal to \eqn{s_1^2} with \eqn{s_1=(c1r[2]-c1r[1])/3} 
+and off-diagonals are 0 for \eqn{i=1,2,\ldots,n_{1h}} 
+where \eqn{n_{1h}=\lfloor{n_1/2\rfloor}},
+and for \eqn{k=n_{1h}+1,\ldots,n_1}, \eqn{X_k = Z_k+r (\cos(T_k), \sin(T_k))} 
+where \eqn{Z_k \sim BVN(X_{k-n_{1h}}, I_2(r_0))}
+with \eqn{I_2(r_0)} being the \eqn{2 \times 2} matrix 
+with diagonals \eqn{r_0/3} and 0 off-diagonals, \eqn{r \sim Uniform(0,r_0)} and
 \eqn{T_k} are iid \eqn{\sim Uniform(0,2 \pi)}.
 Similarly, the points from class 2, say \eqn{Y_j} are generated as follows: 
-\eqn{Y_j \stackrel{iid}{\sim} BVN(CM(S_2),I_{2y})} where \eqn{CM(S_1)} is the center of mass of \eqn{S_1} and I_{2y} is a \eqn{2 \times 2} matrix with diagonals
-equal to \eqn{s_2^2} with \eqn{s_2=(c2r[2]-c2r[1])/3} and off-diagonals are 0 for \eqn{j=1,2,\ldots,n_{2h}} where \eqn{n_{2h}=\lfloor n_2/2\rfloor)},
-and for \eqn{l=n_{2h},+1,\ldots,n_2}, \eqn{Y_l = W_k+r (\cos(T_l), \sin(T_l))} where \eqn{W_l \sim BVN(Y_{l-n_{2h}}, I_2(r_0))}
-with \eqn{I_2(r_0)} being the \eqn{2 \times 2} matrix with diagonals \eqn{r_0/3} and 0 off-diagonals, \eqn{r \sim Uniform(0,r_0)} and
+\eqn{Y_j \stackrel{iid}{\sim} BVN(CM(S_2),I_{2y})} 
+where \eqn{CM(S_1)} is the center of mass of \eqn{S_1} and 
+\eqn{I_{2y}} is a \eqn{2 \times 2} matrix with diagonals
+equal to \eqn{s_2^2} with \eqn{s_2=(c2r[2]-c2r[1])/3} and 
+off-diagonals are 0 for \eqn{j=1,2,\ldots,n_{2h}} 
+where \eqn{n_{2h}=\lfloor n_2/2\rfloor)},
+and for \eqn{l=n_{2h},+1,\ldots,n_2}, \eqn{Y_l = W_k+r (\cos(T_l), \sin(T_l))} 
+where \eqn{W_l \sim BVN(Y_{l-n_{2h}}, I_2(r_0))}
+with \eqn{I_2(r_0)} being the \eqn{2 \times 2} matrix 
+with diagonals \eqn{r_0/3} and 0 off-diagonals, \eqn{r \sim Uniform(0,r_0)} and
 \eqn{T_l \stackrel{iid}{\sim} Uniform(0,2 \pi)}.
 
-Notice that the classes will be segregated if the supports \eqn{S_1} and \eqn{S_2} are separated, with more separation
-implying stronger segregation. Furthermore, \eqn{r_0} (denoted as \code{r0} as an argument) determines the level of self-reflexivity or self correspondence,
-i.e. smaller \eqn{r_0} implies a higher level of self correspondence and vice versa for higher \eqn{r_0} .
+Notice that the classes will be segregated 
+if the supports \eqn{S_1} and \eqn{S_2} are separated, with more separation
+implying stronger segregation. Furthermore, \eqn{r_0} 
+(denoted as \code{r0} as an argument) determines 
+the level of self-reflexivity or self correspondence,
+i.e., smaller \eqn{r_0} implies a higher level of self correspondence 
+and vice versa for higher \eqn{r_0} .
 
 See also (\insertCite{ceyhan:NNCorrespond2018;textual}{nnspat})
 and the references therein.

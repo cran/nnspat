@@ -59,16 +59,16 @@ That is, each test is Pielou's overall test of segregation based on NNCTs for \e
 This overall test is based on the chi-squared approximation,
 is equivalent to Pearson's chi-squared test on NNCT and
 is due to \insertCite{pielou:1961;textual}{nnspat}.
-Each test is appropriate (i.e. have the appropriate asymptotic sampling distribution)
+Each test is appropriate (i.e., have the appropriate asymptotic sampling distribution)
 when that data is obtained by sparse sampling.
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{(k-1)^2}, description of the 
-alternative with the corresponding null values (i.e. expected values) of NNCT entries,
-sample estimates (i.e. observed values) of the entries in NNCT.
-The functions also provide names of the test statistics, the method and the data set used.
+alternative with the corresponding null values (i.e., expected values) of NNCT entries,
+sample estimates (i.e., observed values) of the entries in NNCT.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that \eqn{E(N_{ij})=n_i c_j /n} for all entries in the NNCT
-where \eqn{n_i} is the sum of row \eqn{i} (i.e. size of class \eqn{i}), \eqn{c_j} is the sum of column \eqn{j} in the \eqn{k \times k} NNCT for \eqn{k \ge 2}.
+where \eqn{n_i} is the sum of row \eqn{i} (i.e., size of class \eqn{i}), \eqn{c_j} is the sum of column \eqn{j} in the \eqn{k \times k} NNCT for \eqn{k \ge 2}.
 In the output, the test statistic and the \eqn{p}-value are valid only 
 for (properly) sparsely sampled data.
 

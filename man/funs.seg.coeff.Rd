@@ -24,7 +24,7 @@ Two functions: \code{Pseg.coeff} and \code{seg.coeff}.
 Each function computes segregation coefficients based on NNCTs.
 The function \code{Pseg.coeff} computes Pielou's segregation coefficient (\insertCite{pielou:1961;textual}{nnspat})
 for the two-class case (i.e., based on \eqn{2 \times 2} NNCTs)
-and \code{seg.coeff} is the extension of \code{Pseg.coeff} to the multi-class case (i.e. for \eqn{k \times k} NNCTs with \eqn{k \ge 2})
+and \code{seg.coeff} is the extension of \code{Pseg.coeff} to the multi-class case (i.e., for \eqn{k \times k} NNCTs with \eqn{k \ge 2})
 and provides a \eqn{k \times k} matrix of segregation coefficients
 (\insertCite{ceyhan:SiM-seg-ind2014;textual}{nnspat}).
 Both functions use the same argument, \code{ct}, for NNCT.
@@ -89,7 +89,5 @@ seg.coeff(ct)
 \code{\link{seg.ind}}, \code{\link{Zseg.coeff.ct}} and \code{\link{Zseg.coeff}}
 }
 \author{
-Elvan Ceyhan
-
 Elvan Ceyhan
 }

@@ -6,7 +6,8 @@
 \alias{cov.tctIII}
 \alias{cov.tct3}
 \alias{cov.tctIV}
-\title{Functions for Covariances of the Entries of the Types I, III and IV TCTs}
+\title{Functions for Covariances of the Entries of the 
+Types I, III and IV TCTs}
 \usage{
 cov.tctI(ct, CovN)
 
@@ -19,24 +20,34 @@ cov.tctIV(ct, CovN)
 \arguments{
 \item{ct}{A nearest neighbor contingency table}
 
-\item{CovN}{The \eqn{k^2 \times k^2} covariance matrix of row-wise vectorized cell counts of NNCT, \code{ct}.}
+\item{CovN}{The \eqn{k^2 \times k^2} covariance matrix of 
+row-wise vectorized cell counts of NNCT, \code{ct}.}
 }
 \value{
-Each of these functions returns a \eqn{k^2 \times k^2} covariance matrix, whose entries are the covariances of
-the entries in the TCTs for the corresponding type I-IV cell-specific test.
+Each of these functions returns 
+a \eqn{k^2 \times k^2} covariance matrix, 
+whose entries are the covariances of
+the entries in the TCTs for the corresponding 
+type I-IV cell-specific test.
 The row and column names are inherited from \code{ct}.
 }
 \description{
-Four functions: \code{cov.tctI}, \code{cov.tctIII}, \code{cov.tct3} and \code{cov.tctIV}.
+Four functions: \code{cov.tctI}, \code{cov.tctIII}, \code{cov.tct3},
+and \code{cov.tctIV}.
 
-These functions return the covariances between between entries in the TCT for the types I, III, and IV
-cell-specific tests in matrix form which is of dimension \eqn{k^2 \times k^2}.
-The covariance matrix entries are \eqn{cov(T_{ij},T_{kl})} when \eqn{T_{ij}} values are by default corresponding to 
+These functions return the covariances 
+between entries in the TCT for the types I, III, and IV
+cell-specific tests in matrix form 
+which is of dimension \eqn{k^2 \times k^2}.
+The covariance matrix entries are \eqn{cov(T_{ij},T_{kl})}
+when \eqn{T_{ij}} values are by default corresponding to 
 the row-wise vectorization of TCT. 
-The argument \code{CovN} must be the covariance between \eqn{N_{ij}} values which are obtained from the NNCT by row-wise
+The argument \code{CovN} must be the covariance 
+between \eqn{N_{ij}} values which are obtained from the NNCT by row-wise
 vectorization.
 The functions \code{cov.tctIII} and \code{cov.tct3} are equivalent.
-These covariances are valid under RL or conditional on \eqn{Q} and \eqn{R} under CSR.
+These covariances are valid under RL or 
+conditional on \eqn{Q} and \eqn{R} under CSR.
 
 See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}).
 }

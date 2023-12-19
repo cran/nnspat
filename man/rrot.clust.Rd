@@ -18,7 +18,7 @@ rrot.clust(
 \item{k}{A positive integer representing the number of clusters to be generated}
 
 \item{d}{Radial shift indicating the level of clustering in the data. Larger absolute values in either
-direction (i.e. positive or negative) would yield stronger clustering.}
+direction (i.e., positive or negative) would yield stronger clustering.}
 
 \item{sd}{The standard deviation of the components of the bivariate normal distribution with default 
 \eqn{sd=d\sqrt{2 (1-cos(2 \pi/k))}/3}, used only when \code{distribution="bvnormal"}.}
@@ -47,7 +47,7 @@ If \code{distribution="uniform"}, the points are uniformly generated in their sq
 supports with unit edge lengths and centers at \eqn{(d \cos(j 2 \pi/k),d \cos(j 2\pi/k))} for \eqn{j=1,2,\ldots,k}.
 
 If \code{distribution="bvnormal"}, the points are generated from the bivariate normal distribution with means equal to the
-centers of the above squares (i.e. for each cluster with \code{mean=}\eqn{(d \cos(j 2 \pi/k),d \cos(j 2\pi/k))}
+centers of the above squares (i.e., for each cluster with \code{mean=}\eqn{(d \cos(j 2 \pi/k),d \cos(j 2\pi/k))}
 for \eqn{j=1,2,\ldots,k} and the covariance matrix \eqn{sd I_2}, where \eqn{sd=d\sqrt{2 (1-cos(2 \pi/k))}/3}
 and \eqn{I_2} is the \eqn{2 \times 2} identity matrix.
 

@@ -16,14 +16,18 @@ classirest(i, lab)
 \item{lab}{The \code{vector} of class labels (numerical or categorical)}
 }
 \value{
-Both functions return the data relabeled as class \eqn{i} label is retained and the remaining is
+Both functions return the data relabeled 
+as class \eqn{i} label is retained and the remaining is
 relabeled as "rest".
 }
 \description{
 Two functions: \code{lab.onevsrest} and \code{classirest}.
 
-Both functions relabel the points, keeping class \eqn{i} label as is and relabeling the other classes as "rest".
-Used in the one-vs-rest type comparisons after the overall segregation test is found to be significant.
+Both functions relabel the points, 
+keeping class \eqn{i} label as is and 
+relabeling the other classes as "rest".
+Used in the one-vs-rest type comparisons after 
+the overall segregation test is found to be significant.
 
 See also (\insertCite{ceyhan:jkss-posthoc-2017;textual}{nnspat}).
 }

@@ -49,7 +49,7 @@ Both functions are objects of class \code{"Chisqtest"} but with different argume
 Each one performs the hypothesis test of equality of the expected value of the off-diagonal 
 cell counts (i.e., entries) under RL or CSR in the NNCT for \eqn{k \ge 2} classes.
 That is, each performs Pielou's first type of NN symmetry test which is also equivalent to McNemar's
-test on the NNCT. The test is appropriate (i.e. have the appropriate asymptotic sampling distribution)
+test on the NNCT. The test is appropriate (i.e., have the appropriate asymptotic sampling distribution)
 provided that data is obtained by sparse sampling.
 (See \insertCite{ceyhan:SWJ-spat-sym2014;textual}{nnspat} for more detail).
 
@@ -61,10 +61,10 @@ If \code{TRUE} the continuity correction to McNemar's test is implemented,
 and if \code{FALSE} such a correction is not implemented. 
 
 Each function yields the test statistic, \eqn{p}-value and \code{df} which is \eqn{k(k-1)/2}, description of the 
-alternative with the corresponding null values (i.e. expected values) of differences of the off-diagonal entries,(which is
-0 for this function) and also the sample estimates (i.e. observed values) of absolute differences of th
+alternative with the corresponding null values (i.e., expected values) of differences of the off-diagonal entries,(which is
+0 for this function) and also the sample estimates (i.e., observed values) of absolute differences of th
 off-diagonal entries of NNCT (in the upper-triangular form).
-The functions also provide names of the test statistics, the method and the data set used.
+The functions also provide names of the test statistics, the description of the test and the data set used.
 
 The null hypothesis is that \eqn{E(N_{ij})=E(N_{ji})} for all entries for \eqn{i \ne j} (i.e., symmetry in the 
 mixed NN structure).

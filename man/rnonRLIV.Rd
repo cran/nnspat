@@ -87,7 +87,7 @@ to be nondegenerately defined).
 If \code{rand.init=TRUE}, first \eqn{k_0} entries are chosen as the initial cases in the data set,
 \code{dat}, otherwise, \eqn{k_0} initial cases are selected randomly among the data points.
 
-Algorithmically, first all dat points are treated as non-cases (i.e. controls or healthy subjects).
+Algorithmically, first all dat points are treated as non-cases (i.e., controls or healthy subjects).
 Then the function follows the following steps for labeling of the points: 
 
 step 0: \eqn{n_1} is generated randomly from a Poisson distribution with \code{mean = round(n*ult.prop,0)}, so that the 
@@ -106,7 +106,7 @@ which is the sum of the BVN densities scaled by the maximum of such sums.
 See the description for the details of the parameters in the \code{prob}.
 
 step 3: The procedure ends when number of cases \eqn{n_c} exceed \eqn{n_1}, and \eqn{n_c-n_1} of the cases (other than the initial
-cases) are randomly selected and relabeled as controls, i.e. 0s, so that the number of cases is
+cases) are randomly selected and relabeled as controls, i.e., 0s, so that the number of cases is
 exactly \eqn{n_1}.
 
 In the output cases are labeled as 1 and controls as 0, and initial contagious case is marked with a red cross
